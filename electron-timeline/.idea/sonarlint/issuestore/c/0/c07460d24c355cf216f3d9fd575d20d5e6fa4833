@@ -1,0 +1,7 @@
+
+`javascript:S2814K"DRename "pwd" as this name is already used in declaration at line 66.(²¯¼ò
+jjavascript:S2814-"IRename "username" as this name is already used in declaration at line 36.(åÖÇ³ûÿÿÿÿ
+cjavascript:UnusedVariablet"9Remove the declaration of the unused 'username' variable.(Æ­¾öøÿÿÿÿ
+^javascript:UnusedVariableu"4Remove the declaration of the unused 'pwd' variable.(øı÷üÿÿÿÿ
+\javascript:S1854t";Remove this useless assignment to local variable "username"(Æ­¾öøÿÿÿÿ
+Wjavascript:S1854u"6Remove this useless assignment to local variable "pwd"(øı÷üÿÿÿÿ
