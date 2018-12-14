@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Timeline</title>
+	<!--public文件夹下的样式/图片/js，相对路径只需要输入public之后的即可-->
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+	<!--标题、导航栏-->
+	<div id="title-part">
+		<div><a id="title-content">Timeline</a></div>
+		<div id="buttons">
+			<!--更新消息显示区内容，展示新消息-->
+			<div id="bt-refresh">
+				<img src="images/bt-refresh.png" alt="bt-refresh">
+			</div>
+			<!--编辑个人新消息部分，游客状态无法使用-->
+			<div id="bt-add">
+				<img src="images/bt-add.png" alt="bt-add" onclick="Edit();">
+			</div>
+			<!--登录/注销-->
+			<div id="bt-log">
+				<button class="is-login is-logout" onclick="ShowLogin();">登录</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="edit-part" class="hide">
+		<textarea id="edit-area" placeholder="谈谈最近的新鲜事吧.."></textarea>
+		<div id="edit-bt-area">
+			<input type="file" name="选择上传图片" value="图片"/>
+			<button>确定</button>
+			<button onclick="HideAll();">取消</button>
+		</div>
+
+	</div>
+
+	<!--消息显示部分-->
+	<div id="timeline-part">
+
+		<div class="msg hide">
+
+		</div>
+		<button id="bt-load">更多...</button>
+	</div>
+
+	<!--登录/注册-->
+	<div id="layer">
+		<!--hide class用来标记是否隐藏，shade为出现弹窗时遮盖底色-->
+		<div id="shade" class="bg hide"></div>
+		<!--登录弹窗-->
+		<div id="login" class="modal hide">
+			<form method="post" onsubmit="">
+				<!--弹窗标题栏，由返回图标与标题内容组成-->
+				<div class="first-p">
+					<img class="bt-close" src="images/bt-close.png" onclick="HideAll();">
+					<span>登录</span>
+				</div>
+				<!--输入用户名-->
+				<div class="input-box">用户：
+					<input id="login-username" type="text" onblur="onBlur_username();" onfocus="onFocus_username();"/></div>
+				<!--用户名不符要求时的提示框-->
+				<p id="login-username-reminder" class="alert-p"></p>
+
+				<!--输入密码-->
+				<div class="input-box">密码：
+					<input id="login-pwd" type="password" onblur="onBlur_pwd();" onfocus="onFocus_pwd();"/></div>
+				<!--密码不符要求时的提示框-->
+				<p id="login-pwd-reminder" class="alert-p"></p>
+
+				<div class="op-bt">
+					<input id="bt-login" class="bt-submit" type="submit" value="登录" onclick="Login();">
+				</div>
+			</form>
+			<div class="tips" id="go-to-register">还没有账号？<a onclick="ShowRegister();">去注册</a>！</div>
+		</div>
+
+		<!--注册弹窗-->
+		<div id="register" class="modal hide">
+			<div class="first-p">
+				<img class="bt-close" src="images/bt-close.png" onclick="HideAll();">
+				<span>注册</span>
+			</div>
+			<!--输入用户名-->
+			<div class="input-box">用户：
+				<input id="register-username" type="text" onblur="onBlur_username();" onfocus="onFocus_username();"/></div>
+			<!--用户名不符要求时的提示框-->
+			<p id="register-username-reminder" class="alert-p"></p>
+
+			<div class="input-box">密码：
+				<input id="register-pwd" type="password" onblur="onBlur_pwd();" onfocus="onFocus_pwd();"/></div>
+			<!--密码不符要求时的提示框-->
+			<p id="register-pwd-reminder" class="alert-p"></p>
+
+			<div id="confirm" class="input-box">确认密码：
+				<input id="register-confirm-pwd" type="password" onblur="onBlur_confirm_pwd();" onfocus="onFocus_confirm_pwd();"/></div>
+			<!--确认密码不符要求时的提示框-->
+			<p id="confirm-pwd-reminder" class="alert-p"></p>
+
+			<div class="op-bt">
+				<input class="bt-submit" type="submit" value="注册" onclick="Login();">
+			</div>
+			<div class="tips" id="go-to-login">已有账号？现在<a onclick="ShowLogin();">去登录</a>！</div>
+		</div>
+	</div>
+
+	<script src="/javascripts/login_register_form.js"></script>
+</body>
+</html>
