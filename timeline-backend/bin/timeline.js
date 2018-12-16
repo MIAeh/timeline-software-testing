@@ -3,7 +3,6 @@ var app = express();
 var bodyParser = require('body-parser');
 
 
-
 //路由
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
@@ -71,6 +70,9 @@ app.get('/login', function(req, res){
     $sql.end();
 });
 
+var formidableMiddleware = require('express-formidable');
+app.use(formidableMiddleware());
+var fs = require("fs");
 //发布消息
 app.post('/publish', function(req, res) {
     //连接数据库
@@ -79,13 +81,28 @@ app.post('/publish', function(req, res) {
     var $sql = $mysql.createConnection(sql.mysql);
     $sql.connect();
 
-    var username = req.body.username;
-    var content = req.body.content;
+    var username = req.fields.username;
+    var content = req.fields.content;
 
-    var register = "insert into message (username, content) value (" + username + "," + content + ")";
+    var picture = req.files.picture;
+    var pictureName = new Date().getTime().toString() + '-' + picture.name
+    var des_file = "/opt/lampp/htdocs/timeline/" + pictureName;
+    fs.readFile( picture.path, function (err, data) {
+        fs.writeFile(des_file, data, function (err) {
+            if( err ){
+                var response = {
+                    code : '001',
+                    err : err
+                };
+                res.json(response);
+            }
+        });
+    });
+
+    var publish = "insert into message (username, content, picture) value (" + username + "," + content +  ",\"http://47.100.239.92/timeline/" + pictureName + "\")";
 
     var outRes = res;
-    $sql.query(register, function(err,res){
+    $sql.query(publish, function(err,res){
         if(err){
             var response = {
                 code : "001",
