@@ -13,13 +13,7 @@ function HideAll(){
     document.getElementById('login').classList.add('hide');
     document.getElementById('register').classList.add('hide');
 }
-function Edit() {
-    if(document.getElementById('edit-part').classList.contains('hide')) {
-        document.getElementById('edit-part').classList.remove('hide');
-    } else {
-        document.getElementById('edit-part').classList.add('hide');
-    }
-}
+
 
 /**
  * 验证input是否为空
@@ -115,7 +109,13 @@ function onFocus_confirm_pwd() {
 function Login() {
     var username = document.getElementById('login-username').value;
     var pwd = document.getElementById('login-pwd').value;
-    if((onBlur_username() === false) || (onBlur_pwd() === false)) {
-        document.getElementById('bt-login').isDisabled = true;
+    getUser(successCallback);
+
+    function successCallback(res) {
+        console.log(res);
     }
+}
+
+function Register() {
+
 }

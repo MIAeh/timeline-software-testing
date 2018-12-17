@@ -1,3 +1,4 @@
-/**
- * Created by Ed_Strickland on 2018/12/17.
- */
+function getUser(successCallback) {
+    var sUrl = sDomain + "mockdata/users.json"
+    get(sUrl, successCallback);
+}

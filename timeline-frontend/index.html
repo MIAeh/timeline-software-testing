@@ -16,7 +16,7 @@
 		</div>
 		<!--编辑个人新消息部分，游客状态无法使用-->
 		<div id="bt-add">
-			<img src="resources/img/bt-add.png" alt="bt-add" onclick="Edit();">
+			<img src="resources/img/bt-add.png" alt="bt-add"">
 		</div>
 		<!--登录/注销-->
 		<div id="bt-log">
@@ -29,11 +29,11 @@
 	<div id="edit-part" class="hide">
 		<textarea id="edit-area" placeholder="谈谈最近的新鲜事吧.."></textarea>
 		<div id="edit-bt-area">
-			<input type="file" name="选择上传图片" value="图片"/>
-			<button>确定</button>
-			<button onclick="HideAll();">取消</button>
+			<!--限制上传文件类型为png, jpg, jpeg-->
+			<input type="file" id="bt-upload-img" name="选择上传图片" accept=".jpg, .image/jpeg, .image/png" value="图片"/>
+			<input type="button" id="bt-post-new-msg" value="确定">
+			<input type="button" id="bt-cancel-post" onclick="HideAll();" value="取消">
 		</div>
-
 	</div>
 
 	<!--消息显示部分-->
@@ -42,36 +42,59 @@
 		<ul id="timelines">
 			<li class="timeline-listItem">
 				<div class="msg">
-
+					<p class="msg-title">
+						<span class="msg-user">aaa</span>
+						<span class="msg-time">2013-1-2</span>
+					</p>
+					<p class="msg-content">
+						ksa
+					</p>
 				</div>
 			</li>
 			<li class="timeline-listItem">
 				<div class="msg">
-
+					<p class="msg-title">
+						<span class="msg-user">aaa</span>
+						<span class="msg-time">2013-1-2</span>
+					</p>
+					<p class="msg-content">
+						ksakdka
+					</p>
 				</div>
 			</li>
 			<li class="timeline-listItem">
 				<div class="msg">
-
+					<p class="msg-title">
+						<span class="msg-user">aaa</span>
+						<span class="msg-time">2013-1-2</span>
+					</p>
+					<p class="msg-content">
+						ksa
+					</p>
 				</div>
 			</li>
 			<li class="timeline-listItem">
 				<div class="msg">
-
+					<p class="msg-title">
+						<span class="msg-user">aaa</span>
+						<span class="msg-time">2013-1-2</span>
+					</p>
+					<p class="msg-content">
+					</p>
 				</div>
 			</li>
 		</ul>
 		<button id="bt-load">更多...</button>
 	</div>
-
 </main>
+
 <!--登录/注册-->
 <div id="layer">
 	<!--hide class用来标记是否隐藏，shade为出现弹窗时遮盖底色-->
 	<div id="shade" class="bg hide"></div>
 	<!--登录弹窗-->
 	<div id="login" class="modal hide">
-		<form method="post" onsubmit="">
+		<form method="post" action="index.html">
 			<!--弹窗标题栏，由返回图标与标题内容组成-->
 			<div class="first-p">
 				<img class="bt-close" src="resources/img/bt-close.png" onclick="HideAll();">
@@ -102,25 +125,27 @@
 			<img class="bt-close" src="resources/img/bt-close.png" onclick="HideAll();">
 			<span>注册</span>
 		</div>
-		<!--输入用户名-->
-		<div class="input-box">用户：
-			<input id="register-username" type="text" onblur="onBlur_username();" onfocus="onFocus_username();"/></div>
-		<!--用户名不符要求时的提示框-->
-		<p id="register-username-reminder" class="alert-p"></p>
+		<form>
+			<!--输入用户名-->
+			<div class="input-box">用户：
+				<input id="register-username" type="text" onblur="onBlur_username();" onfocus="onFocus_username();"/></div>
+			<!--用户名不符要求时的提示框-->
+			<p id="register-username-reminder" class="alert-p"></p>
 
-		<div class="input-box">密码：
-			<input id="register-pwd" type="password" onblur="onBlur_pwd();" onfocus="onFocus_pwd();"/></div>
-		<!--密码不符要求时的提示框-->
-		<p id="register-pwd-reminder" class="alert-p"></p>
+			<div class="input-box">密码：
+				<input id="register-pwd" type="password" onblur="onBlur_pwd();" onfocus="onFocus_pwd();"/></div>
+			<!--密码不符要求时的提示框-->
+			<p id="register-pwd-reminder" class="alert-p"></p>
 
-		<div id="confirm" class="input-box">确认密码：
-			<input id="register-confirm-pwd" type="password" onblur="onBlur_confirm_pwd();" onfocus="onFocus_confirm_pwd();"/></div>
-		<!--确认密码不符要求时的提示框-->
-		<p id="confirm-pwd-reminder" class="alert-p"></p>
+			<div id="confirm" class="input-box">确认密码：
+				<input id="register-confirm-pwd" type="password" onblur="onBlur_confirm_pwd();" onfocus="onFocus_confirm_pwd();"/></div>
+			<!--确认密码不符要求时的提示框-->
+			<p id="confirm-pwd-reminder" class="alert-p"></p>
 
-		<div class="op-bt">
-			<input class="bt-submit" type="submit" value="注册" onclick="Login();">
-		</div>
+			<div class="op-bt">
+				<input class="bt-submit" type="submit" value="注册" onclick="Register();">
+			</div>
+		</form>
 		<div class="tips" id="go-to-login">已有账号？现在<a onclick="ShowLogin();">去登录</a>！</div>
 	</div>
 </div>
@@ -130,5 +155,6 @@
 <script src="/js/data/timeline.js"></script>
 <script src="/js/timeline.js"></script>
 <script src="/js/login_register_form.js"></script>
+<script src="/js/post_msg.js"></script>
 </body>
 </html>

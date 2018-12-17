@@ -13,6 +13,9 @@ function get(url, successCallback) {
     })
 }
 
-function post() {
+function post(url, successCallback) {
+    $.post({
+
+    })
 
 }
