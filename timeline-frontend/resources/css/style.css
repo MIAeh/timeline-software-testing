@@ -78,8 +78,25 @@ main {
 
 #timelines {
 	list-style: none;
+	padding-bottom: 60px;
 }
 
+.timeline-listItem {
+	margin-right: 30px;
+	border-bottom: 1px solid #EDEDED;
+}
+
+.msg-user {
+	font-weight: bold;
+	color: #7f7f7f;
+}
+
+.msg-time {
+	float: right;
+	font-size: 12px;
+	color: #7f7f7f;
+	margin-top: 5px;
+}
 #bt-load {
 	position: absolute;
 	left: 0;

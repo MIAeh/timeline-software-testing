@@ -27,13 +27,15 @@
 
 <main>
 	<div id="edit-part" class="hide">
-		<textarea id="edit-area" placeholder="谈谈最近的新鲜事吧.."></textarea>
-		<div id="edit-bt-area">
-			<!--限制上传文件类型为png, jpg, jpeg-->
-			<input type="file" id="bt-upload-img" name="选择上传图片" accept=".jpg, .image/jpeg, .image/png" value="图片"/>
-			<input type="button" id="bt-post-new-msg" value="确定">
-			<input type="button" id="bt-cancel-post" onclick="HideAll();" value="取消">
-		</div>
+		<form id="new-msg-form">
+			<textarea id="edit-area" placeholder="谈谈最近的新鲜事吧.."></textarea>
+			<div id="edit-bt-area">
+				<!--限制上传文件类型为png, jpg, jpeg-->
+				<input type="file" id="bt-upload-img" name="选择上传图片" accept=".jpg, .image/jpeg, .image/png" value="图片"/>
+				<input type="button" id="bt-post-new-msg" value="确定">
+				<input type="button" id="bt-cancel-post" onclick="HideAll();" value="取消">
+			</div>
+		</form>
 	</div>
 
 	<!--消息显示部分-->
@@ -84,7 +86,7 @@
 				</div>
 			</li>
 		</ul>
-		<button id="bt-load">更多...</button>
+		<div><button id="bt-load">更多...</button></div>
 	</div>
 </main>
 
@@ -94,7 +96,7 @@
 	<div id="shade" class="bg hide"></div>
 	<!--登录弹窗-->
 	<div id="login" class="modal hide">
-		<form method="post" action="index.html">
+		<form method="get" id="login-form">
 			<!--弹窗标题栏，由返回图标与标题内容组成-->
 			<div class="first-p">
 				<img class="bt-close" src="resources/img/bt-close.png" onclick="HideAll();">
@@ -125,7 +127,7 @@
 			<img class="bt-close" src="resources/img/bt-close.png" onclick="HideAll();">
 			<span>注册</span>
 		</div>
-		<form>
+		<form method="post" id="register-form">
 			<!--输入用户名-->
 			<div class="input-box">用户：
 				<input id="register-username" type="text" onblur="onBlur_username();" onfocus="onFocus_username();"/></div>
@@ -155,6 +157,5 @@
 <script src="/js/data/timeline.js"></script>
 <script src="/js/timeline.js"></script>
 <script src="/js/login_register_form.js"></script>
-<script src="/js/post_msg.js"></script>
 </body>
 </html>
