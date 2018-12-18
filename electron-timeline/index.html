@@ -110,7 +110,10 @@
 	</div>
 </div>
 
-<script src="app/resources/timeline-frontend/resources/js/jquery.js"></script>
+<!--改变jquery引用方式，解决与electron中'$'冲突-->
+<script>
+    window.$ = window.jQuery = require('./app/resources/timeline-frontend/resources/js/jquery.js');
+</script>
 <script src="app/resources/timeline-frontend/js/util/cookie.js"></script>
 <script src="app/resources/timeline-frontend/js/util/httpUtil.js"></script>
 <script src="app/resources/timeline-frontend/js/util/timeline-item.js"></script>
