@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
 	margin: 0;
 	height: 100%;
 	width: 100%;
@@ -96,6 +95,11 @@ main {
 	font-size: 12px;
 	color: #7f7f7f;
 	margin-top: 5px;
+}
+
+.msg-pic {
+	max-width: 100px;
+	max-height: 100px;
 }
 #bt-load {
 	position: absolute;
@@ -253,25 +257,40 @@ main {
 textarea {
 	position: relative;
 	resize: none;
-	left: 15px;
+	left: 20px;
+	right: 20px;
 	top: 10px;
 	background-color: transparent;
-	width: 860px;
+	width: 93%;
 	min-height: 60px;
 	border-color: #EDEDED;
 	border-radius: 10px;
 	font-size: 16px;
 }
 
+#bt-upload-img {
+	min-width: 80px;
+}
+
 #edit-bt-area {
-	margin-right: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	margin-left: 20px;
+	margin-right: 5%;
 }
 
 
 #edit-bt-area input {
 	margin-top: 15px;
 	margin-bottom: 15px;
-	margin-left: 15px;
+}
+
+#edit-bt-opt {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
 
 #bt-post-new-msg, #bt-cancel-post{
@@ -283,5 +302,8 @@ textarea {
 	width: 45px;
 	height: 20px;
 	border-radius: 10px;
-	float: right;
+}
+
+#bt-cancel-post {
+	margin-left: 5px;
 }

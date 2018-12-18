@@ -3,7 +3,7 @@ function Log(){
         document.getElementById('shade').classList.remove('hide');
         document.getElementById('login').classList.remove('hide');
     } else {
-        if(window.confirm("确定退出？")) {
+        if(window.confirm("确定要注销吗？")) {
             document.cookie = "user=";
             document.getElementById('log-status').innerText = "登录";
             window.location.href = "";
@@ -135,22 +135,22 @@ function Login() {
     // }
 
     $.ajax({
-        url: 'http://47.100.239.92:3000/login',
-        data: {"username": user},
-        type: "GET",
-        dataType: "json",
-        success: function(data) {
-            if(typeof (data.res) === "undefined" || data.res.length === 0) {
+        "url": 'http://47.100.239.92:3000/login',
+        "data": {"username": user},
+        "type": "GET",
+        "dataType": "json",
+        success: function(oRes) {
+            if(typeof (oRes.res) === "undefined" || oRes.res.length === 0) {
                 alert("用户不存在！");
                 console.log("----no such user----");
             } else {
-                var cmp = data.res["0"].password;
+                var cmp = oRes.res["0"].password;
                 // console.log(cmp);
                 if(pwd === cmp) {
                     //设置cookie
                     setCookie(user);
                     console.log(getCookie());
-                    document.getElementById('log-status').innerText = "注销";
+                    document.getElementById('log-status').innerText = getCookie();
                     window.location.href = "";
                     console.log("----login success----");
                 } else {
@@ -179,15 +179,15 @@ function Register() {
         // var data = {"username": user, "password": pwd};
         // postUser(data);
         $.ajax({
-            url: 'http://47.100.239.92:3000/register',
-            data: {"username": user, "password": pwd},
-            type: "POST",
-            dataType: "json",
-            success: function(data) {
-                if(data) {
-                    if(data.code == "001") {
+            "url": 'http://47.100.239.92:3000/register',
+            "data": {"username": user, "password": pwd},
+            "type": "POST",
+            "dataType": "json",
+            success: function(oRes) {
+                if(oRes) {
+                    if(oRes.code == "001") {
                         alert("该用户名已经存在");
-                    } else if(data.code == "000") {
+                    } else if(oRes.code == "000") {
                         alert("注册成功！");
                         ShowLogin();
                     }

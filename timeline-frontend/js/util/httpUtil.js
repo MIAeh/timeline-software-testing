@@ -22,13 +22,3 @@ function post(url, successCallback, errorCallback, dataType) {
         }
     })
 }
-
-function timeTrans(timestamp) {
-    var time = new Date(timestamp);
-    var year = time.getFullYear();
-    var month = time.getMonth() + 1;
-    var day = time.getDate();
-    var hour = time.getHours();
-    var min = time.getMinutes();
-    var second = time.getSeconds();
-}

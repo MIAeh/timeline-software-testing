@@ -19,7 +19,7 @@ function setCookie(cUser) {
 
 function checkCookie() {
     if(getCookie() !== "") {
-        document.getElementById('log-status').innerText = "注销";
+        document.getElementById('log-status').innerText = getCookie();
     } else {
         document.getElementById('log-status').innerText = "登录";
     }
