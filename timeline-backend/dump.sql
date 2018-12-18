@@ -9,7 +9,7 @@ primary key (username)
 );
 create table message (
 username varchar(30) ,
-time timestamp ,
+time char(13) ,
 content text ,
 picture text
 );
