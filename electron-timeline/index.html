@@ -3,315 +3,89 @@
 <head>
 	<title>Timeline</title>
 	<!--public文件夹下的样式/图片/js，相对路径只需要输入public之后的即可-->
-	<link rel="stylesheet" type="text/css" href="/app/stylesheets/style.css">
-	<style>
-		body {
-			background: #EDEDED;
-			overflow-y: scroll;
-			margin: 0;
-		}
-		#title-part {
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			background: #FFF;
-			height: 60px;
-			width: 100%;
-			margin-bottom: 20px;
-			border-bottom: 1px solid rgba(0,0,0,0.25);
-		}
-
-		#title-content {
-			font-size: 25px;
-			font-weight: bold;
-			color: slategrey;
-			margin-left: 200px;
-		}
-
-		#bt-refresh img {
-			width: 23px;
-			height: 23px;
-			margin-top: 5px;
-			margin-left: 660px;
-		}
-
-		#bt-add img {
-			width: 18px;
-			height: 18px;
-			margin-top: 5px;
-			margin-left: 15px;
-		}
-
-		#bt-log button {
-			font-size: 14px;
-			margin-left: 15px;
-			color: white;
-			font-weight: bold;
-			background-color: slategrey;
-			border-radius: 10px;
-			border-style: none;
-		}
-
-		#timeline-part {
-			position: relative;
-			height: 580px;
-			width: 900px;
-			background: #FFF;
-			margin: 0 auto;
-		}
-
-		#bt-load {
-			position: absolute;
-			left: 400px;
-			bottom: 15px;
-			width: 100px;
-			height: 40px;
-			border-radius: 5px;
-			font-size: 14px;
-		}
-		/**
-         ** 设置光标效果
-         */
-		#title-part div, #title-part button, .modal .first-p img, #bt-load, .bt-submit, .tips a, #edit-bt-area input, #edit-bt-area button{
-			cursor: pointer;
-		}
-
-		#title-content {
-			text-decoration: none;
-			color: black;
-		}
-
-		.tips {
-			margin-left: 70px;
-		}
-
-		#edit-bt-area button {
-			font-size: 12px;
-			border: 1px solid transparent;
-			color: white;
-			font-weight: bold;
-			background-color: slategrey;
-			width: 45px;
-			height: 20px;
-			border-radius: 10px;
-		}
-		.tips a {
-			color: darkblue;
-		}
-
-		.hide{
-			display: none;
-		}
-
-		.bg{
-			position: fixed;
-			top:0;
-			bottom: 0;
-			left:0;
-			right: 0;
-			background: rgba(0,0,0,.5);
-			z-index: 2;
-		}
-
-		.modal{
-			background-color: white;
-			position: fixed;
-			width: 300px;
-			top: 50%;
-			left: 50%;
-			z-index: 3;
-			margin-top: -150px;
-			margin-left: -150px;
-			border-radius: 10px;
-			font-size: 13px;
-		}
-
-		#login {
-			height: 210px;
-		}
-
-		#register {
-			height: 260px;
-		}
-		.modal .input-box {
-			margin-left: 65px;
-		}
-
-		#confirm {
-			margin-left: 40px;
-		}
-
-		/**
-         * 错误信息提示框
-         */
-		.alert-p {
-			color: red;
-			font-size: 10px;
-			width: auto;
-			height: 15px;
-			margin-top: 2px;
-			margin-bottom: 2px;
-			margin-left: 108px;
-		}
-
-		.bt-submit {
-			font-size: 14px;
-			border: 1px solid transparent;
-			color: white;
-			font-weight: bold;
-			background-color: slategrey;
-			width: 90px;
-			height: 25px;
-			border-radius: 10px;
-			float: none;
-			margin-top: 5px;
-			margin-left: 110px;
-		}
-
-		.modal .tips {
-			margin-top: 15px;
-			margin-left: 90px;
-			float: none;
-		}
-
-		/**
-         ** 登录/注册标题栏
-         */
-		.modal .first-p {
-			position: relative;
-			background-color: slategrey;
-			height: 35px;
-			width: 100%;
-			border-radius: 10px 10px 0 0;
-			margin-bottom: 20px;
-		}
-
-		.modal .first-p img {
-			position: absolute;
-			left: 10px;
-			top: 8px;
-			width: 18px;
-			height: 18px;
-		}
-
-		.modal .first-p span {
-			position: absolute;
-			color: white;
-			font-size: 18px;
-			left: 125px;
-			top: 5px;
-			font-weight: bold;
-		}
-
-		#edit-part {
-			background-color: white;
-			width: 900px;
-			margin: 0 auto;
-			margin-bottom: 20px;
-		}
-
-		textarea {
-			position: relative;
-			left: 15px;
-			top: 10px;
-			background-color: transparent;
-			width: 860px;
-			min-height: 60px;
-			border-color: slategrey;
-			border-radius: 10px;
-			font-size: 16px;
-		}
-
-		#edit-bt-area {
-			margin-right: 20px;
-		}
-
-
-		#edit-bt-area input {
-			margin: 15px;
-		}
-
-		#edit-bt-area button {
-			margin-top: 15px;
-			margin-left: 5px;
-			float: right;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="app/resources/timeline-frontend/resources/css/style.css">
 </head>
-<body>
-	<!--标题、导航栏-->
-	<div id="title-part">
-		<div><a id="title-content">Timeline</a></div>
+<body onload="checkCookie();">
+<!--标题、导航栏-->
+<header id="title-part">
+	<div><a id="title-content">Timeline</a></div>
+	<div id="buttons">
 		<!--更新消息显示区内容，展示新消息-->
 		<div id="bt-refresh">
-			<img src="images/bt-refresh.png" alt="bt-refresh">
+			<img src="app/resources/timeline-frontend/resources/img/bt-refresh.png" alt="bt-refresh">
 		</div>
 		<!--编辑个人新消息部分，游客状态无法使用-->
 		<div id="bt-add">
-			<img src="images/bt-add.png" alt="bt-add" onclick="Edit();">
+			<img src="app/resources/timeline-frontend/resources/img/bt-add.png" alt="bt-add">
 		</div>
 		<!--登录/注销-->
 		<div id="bt-log">
-			<button class="is-login is-logout" onclick="ShowLogin();">登录</button>
+			<button id="log-status" onclick="Log();"></button>
 		</div>
 	</div>
+</header>
 
+<main>
 	<div id="edit-part" class="hide">
-		<textarea id="edit-area" placeholder="谈谈最近的新鲜事吧.."></textarea>
-		<div id="edit-bt-area">
-			<input type="file" name="选择上传图片" value="图片"/>
-			<button>确定</button>
-			<button onclick="HideAll();">取消</button>
-		</div>
-
+		<form id="new-msg-form" enctype="multipart/form-data">
+			<textarea id="edit-area" name="content" placeholder="谈谈最近的新鲜事吧.."></textarea>
+			<div id="edit-bt-area">
+				<!--限制上传文件类型为png, jpg, jpeg-->
+				<input type="file" id="bt-upload-img" name="picture" accept=".jpg, .jpeg, .png" value="图片"/>
+				<div id="edit-bt-opt">
+					<input type="button" id="bt-post-new-msg" value="确定">
+					<input type="button" id="bt-cancel-post" onclick="HideAll();" value="取消">
+				</div>
+			</div>
+		</form>
 	</div>
 
 	<!--消息显示部分-->
 	<div id="timeline-part">
 
-		<div class="msg hide">
+		<ul id="timelines"></ul>
+		<div><button id="bt-load">更多...</button></div>
+	</div>
+</main>
 
+<!--登录/注册-->
+<div id="layer">
+	<!--hide class用来标记是否隐藏，shade为出现弹窗时遮盖底色-->
+	<div id="shade" class="bg hide"></div>
+	<!--登录弹窗-->
+	<div id="login" class="modal hide">
+		<div id="login-form">
+			<!--弹窗标题栏，由返回图标与标题内容组成-->
+			<div class="first-p">
+				<img class="bt-close" src="app/resources/timeline-frontend/resources/img/bt-close.png" onclick="HideAll();">
+				<span>登录</span>
+			</div>
+			<!--输入用户名-->
+			<div class="input-box">用户：
+				<input id="login-username" type="text" onblur="onBlur_username();" onfocus="onFocus_username();"/></div>
+			<!--用户名不符要求时的提示框-->
+			<p id="login-username-reminder" class="alert-p"></p>
+
+			<!--输入密码-->
+			<div class="input-box">密码：
+				<input id="login-pwd" type="password" onblur="onBlur_pwd();" onfocus="onFocus_pwd();"/></div>
+			<!--密码不符要求时的提示框-->
+			<p id="login-pwd-reminder" class="alert-p"></p>
+
+			<div class="op-bt">
+				<input id="bt-login" class="bt-submit" type="submit" value="登录" onclick="Login();">
+			</div>
 		</div>
-		<button id="bt-load">更多...</button>
+		<div class="tips" id="go-to-register">还没有账号？<a onclick="ShowRegister();">去注册</a>！</div>
 	</div>
 
-	<!--登录/注册-->
-	<div id="layer">
-		<!--hide class用来标记是否隐藏，shade为出现弹窗时遮盖底色-->
-		<div id="shade" class="bg hide"></div>
-		<!--登录弹窗-->
-		<div id="login" class="modal hide">
-			<form method="post" onsubmit="">
-				<!--弹窗标题栏，由返回图标与标题内容组成-->
-				<div class="first-p">
-					<img class="bt-close" src="images/bt-close.png" onclick="HideAll();">
-					<span>登录</span>
-				</div>
-				<!--输入用户名-->
-				<div class="input-box">用户：
-					<input id="login-username" type="text" onblur="onBlur_username();" onfocus="onFocus_username();"/></div>
-				<!--用户名不符要求时的提示框-->
-				<p id="login-username-reminder" class="alert-p"></p>
-
-				<!--输入密码-->
-				<div class="input-box">密码：
-					<input id="login-pwd" type="password" onblur="onBlur_pwd();" onfocus="onFocus_pwd();"/></div>
-				<!--密码不符要求时的提示框-->
-				<p id="login-pwd-reminder" class="alert-p"></p>
-
-				<div class="op-bt">
-					<input id="bt-login" class="bt-submit" type="submit" value="登录" onclick="Login();">
-				</div>
-			</form>
-			<div class="tips" id="go-to-register">还没有账号？<a onclick="ShowRegister();">去注册</a>！</div>
+	<!--注册弹窗-->
+	<div id="register" class="modal hide">
+		<div class="first-p">
+			<img class="bt-close" src="app/resources/timeline-frontend/resources/img/bt-close.png" onclick="HideAll();">
+			<span>注册</span>
 		</div>
-
-		<!--注册弹窗-->
-		<div id="register" class="modal hide">
-			<div class="first-p">
-				<img class="bt-close" src="/app/images/bt-close.png" onclick="HideAll();">
-				<span>注册</span>
-			</div>
+		<div id="register-form">
 			<!--输入用户名-->
 			<div class="input-box">用户：
 				<input id="register-username" type="text" onblur="onBlur_username();" onfocus="onFocus_username();"/></div>
@@ -329,135 +103,20 @@
 			<p id="confirm-pwd-reminder" class="alert-p"></p>
 
 			<div class="op-bt">
-				<input class="bt-submit" type="submit" value="注册" onclick="Login();">
+				<input class="bt-submit" type="submit" value="注册" onclick="Register();">
 			</div>
-			<div class="tips" id="go-to-login">已有账号？现在<a onclick="ShowLogin();">去登录</a>！</div>
 		</div>
+		<div class="tips" id="go-to-login">已有账号？现在<a onclick="ShowLogin();">去登录</a>！</div>
 	</div>
+</div>
 
-	<!--<script src="/app/javascript/login_register_form.js"></script>-->
-	<script>
-        function ShowLogin(){
-            document.getElementById('shade').classList.remove('hide');
-            document.getElementById('login').classList.remove('hide');
-            document.getElementById('register').classList.add('hide');
-        }
-        function ShowRegister(){
-            document.getElementById('shade').classList.remove('hide');
-            document.getElementById('register').classList.remove('hide');
-            document.getElementById('login').classList.add('hide');
-        }
-        function HideAll(){
-            document.getElementById('shade').classList.add('hide');
-            document.getElementById('login').classList.add('hide');
-            document.getElementById('register').classList.add('hide');
-        }
-        function Edit() {
-            if(document.getElementById('edit-part').classList.contains('hide')) {
-                document.getElementById('edit-part').classList.remove('hide');
-            } else {
-                document.getElementById('edit-part').classList.add('hide');
-            }
-        }
-
-        /**
-         * 验证input是否为空
-         * @param username login/register中用户名输入
-         * @param pwd login/register中密码输入
-         * @param confirm_pwd register中的确认密码
-         */
-        /**
-         * 用户名
-         * @return {boolean}
-         */
-        function onBlur_username() {
-            if(document.getElementById('register').classList.contains('hide')) {
-                var username = document.getElementById('login-username').value;
-                if(!username) {
-                    document.getElementById('login-username-reminder').innerHTML = "请输入用户名";
-                    return false;
-                } else {
-                    document.getElementById('login-username-reminder').innerHTML = "";
-                    return true;
-                }
-            } else {
-                var username = document.getElementById('register-username').value;
-                if(!username) {
-                    document.getElementById('register-username-reminder').innerHTML = "请输入用户名";
-                    return false;
-                } else {
-                    document.getElementById('register-username-reminder').innerHTML = "";
-                    return true;
-                }
-            }
-        }
-        function onFocus_username() {
-            document.getElementById('login-username-reminder').innerHTML = "";
-            document.getElementById('register-username-reminder').innerHTML = "";
-        }
-
-        /**
-         * 密码
-         * @returns {boolean}
-         */
-        function onBlur_pwd() {
-            if(document.getElementById('register').classList.contains('hide')) {
-                var pwd = document.getElementById('login-pwd').value;
-                if (!pwd) {
-                    document.getElementById('login-pwd-reminder').innerHTML = "请输入密码";
-                    return false;
-                } else {
-                    document.getElementById('login-pwd-reminder').innerHTML = "";
-                    return true;
-                }
-            } else {
-                var pwd = document.getElementById('register-pwd').value;
-                if(!pwd) {
-                    document.getElementById('register-pwd-reminder').innerHTML = "请输入密码";
-                } else {
-                    document.getElementById('register-pwd-reminder').innerHTML = "";
-                }
-            }
-        }
-        function onFocus_pwd() {
-            document.getElementById('login-pwd-reminder').innerHTML = "";
-            document.getElementById('register-pwd-reminder').innerHTML = "";
-        }
-
-        /**
-         * 确认密码
-         * @returns {boolean}
-         */
-        function onBlur_confirm_pwd() {
-            var confirm_pwd = document.getElementById('register-confirm-pwd').value;
-            var pwd = document.getElementById('register-pwd').value;
-            if(!confirm_pwd) {
-                document.getElementById('confirm-pwd-reminder').innerHTML = "请再输入一遍密码！";
-                return false;
-            } else if(confirm_pwd != pwd) {
-                document.getElementById('confirm-pwd-reminder').innerHTML = "两次输入密码不一致";
-                return false;
-            }else {
-                document.getElementById('confirm-pwd-reminder').innerHTML = "";
-                return true;
-            }
-        }
-
-        function onFocus_confirm_pwd() {
-            document.getElementById('confirm-pwd-reminder').innerHTML = "";
-        }
-
-        /**
-         * 登录表格submit
-         * @constructor
-         */
-        function Login() {
-            var username = document.getElementById('login-username').value;
-            var pwd = document.getElementById('login-pwd').value;
-            if((onBlur_username() === false) || (onBlur_pwd() === false)) {
-                document.getElementById('bt-login').isDisabled = true;
-            }
-        }
-	</script>
+<script src="app/resources/timeline-frontend/resources/js/jquery.js"></script>
+<script src="app/resources/timeline-frontend/js/util/cookie.js"></script>
+<script src="app/resources/timeline-frontend/js/util/httpUtil.js"></script>
+<script src="app/resources/timeline-frontend/js/util/timeline-item.js"></script>
+<script src="app/resources/timeline-frontend/js/data/timeline.js"></script>
+<script src="app/resources/timeline-frontend/js/data/login.js"></script>
+<script src="app/resources/timeline-frontend/js/timeline.js"></script>
+<script src="app/resources/timeline-frontend/js/log.js"></script>
 </body>
 </html>

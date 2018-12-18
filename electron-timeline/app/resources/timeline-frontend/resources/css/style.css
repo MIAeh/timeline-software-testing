@@ -1,0 +1,309 @@
+html, body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background: #EDEDED;
+}
+main {
+	width: 100%;
+	height: calc(100% - 70px);
+}
+
+#title-part {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: #FFF;
+	height: 50px;
+	width: 100%;
+	margin-bottom: 20px;
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+#title-content {
+	margin-left: 50px;
+	font-size: 25px;
+	font-weight: bold;
+	color: slategrey;
+}
+
+#buttons {
+	margin-right: 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#buttons div {
+	margin-left: 10px;
+}
+
+#bt-refresh img {
+	margin-top: 5px;
+	width: 23px;
+	height: 23px;
+}
+
+#bt-add img {
+	margin-top: 5px;
+	width: 19px;
+	height: 19px;
+}
+
+#log-status {
+	font-size: 14px;
+	color: white;
+	font-weight: bold;
+	background-color: slategrey;
+	border-radius: 10px;
+	border-style: none;
+}
+
+#timeline-part {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	position: relative;
+	min-height: calc(100% - 170px);
+	max-width: 900px;
+	width: 100%;
+	background: #FFF;
+	margin: 0 auto;
+}
+
+#timelines {
+	list-style: none;
+	padding-bottom: 60px;
+}
+
+.timeline-listItem {
+	margin-right: 30px;
+	border-bottom: 1px solid #EDEDED;
+}
+
+.msg-user {
+	font-weight: bold;
+	color: #7f7f7f;
+}
+
+.msg-time {
+	float: right;
+	font-size: 12px;
+	color: #7f7f7f;
+	margin-top: 5px;
+}
+
+.msg-pic {
+	max-width: 100px;
+	max-height: 100px;
+}
+#bt-load {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 15px;
+	margin: auto;
+	width: 100px;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+
+/**
+ ** 设置光标效果
+ */
+#title-part div, #title-part button, .modal .first-p img, #bt-load, .bt-submit, .tips a, #edit-bt-area input{
+	cursor: pointer;
+}
+
+#title-content {
+	text-decoration: none;
+	color: black;
+}
+
+/**
+ * 登录注册弹窗
+ */
+.hide{
+	display: none;
+}
+
+.bg{
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	background: rgba(0,0,0,.5);
+	z-index: 2;
+}
+
+.modal{
+	background-color: white;
+	position: fixed;
+	width: 300px;
+	top: 50%;
+	left: 50%;
+	z-index: 3;
+	margin-top: -150px;
+	margin-left: -150px;
+	border-radius: 10px;
+	font-size: 13px;
+}
+
+#login {
+	height: 210px;
+}
+
+#register {
+	height: 260px;
+}
+.modal .input-box {
+	margin-left: 65px;
+}
+
+#confirm {
+	margin-left: 40px;
+}
+
+.tips {
+	margin-left: 70px;
+}
+
+
+.tips a {
+	color: darkblue;
+}
+
+/**
+ * 错误信息提示框
+ */
+.alert-p {
+	color: red;
+	font-size: 10px;
+	width: auto;
+	height: 15px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 108px;
+}
+
+.bt-submit {
+	font-size: 14px;
+	border: 1px solid transparent;
+	color: white;
+	font-weight: bold;
+	background-color: slategrey;
+	width: 90px;
+	height: 25px;
+	border-radius: 10px;
+	float: none;
+	margin-top: 5px;
+	margin-left: 110px;
+}
+
+.modal .tips {
+	margin-top: 15px;
+	margin-left: 90px;
+	float: none;
+}
+
+/**
+ ** 登录/注册标题栏
+ */
+.modal .first-p {
+	position: relative;
+	background-color: slategrey;
+	height: 35px;
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+	margin-bottom: 20px;
+}
+
+.modal .first-p img {
+	position: absolute;
+	left: 10px;
+	top: 8px;
+	width: 18px;
+	height: 18px;
+}
+
+.modal .first-p span {
+	position: absolute;
+	color: white;
+	font-size: 18px;
+	left: 125px;
+	top: 5px;
+	font-weight: bold;
+}
+
+
+/**
+ * 编辑区
+ */
+#edit-part {
+	background-color: white;
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+textarea {
+	position: relative;
+	resize: none;
+	left: 20px;
+	right: 20px;
+	top: 10px;
+	background-color: transparent;
+	width: 93%;
+	min-height: 60px;
+	border-color: #EDEDED;
+	border-radius: 10px;
+	font-size: 16px;
+}
+
+#bt-upload-img {
+	min-width: 80px;
+}
+
+#edit-bt-area {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	margin-left: 20px;
+	margin-right: 5%;
+}
+
+
+#edit-bt-area input {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#edit-bt-opt {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+#bt-post-new-msg, #bt-cancel-post{
+	font-size: 12px;
+	border: 1px solid transparent;
+	color: white;
+	font-weight: bold;
+	background-color: slategrey;
+	width: 45px;
+	height: 20px;
+	border-radius: 10px;
+}
+
+#bt-cancel-post {
+	margin-left: 5px;
+}
