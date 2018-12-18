@@ -16,18 +16,18 @@
 		</div>
 		<!--编辑个人新消息部分，游客状态无法使用-->
 		<div id="bt-add">
-			<img src="resources/img/bt-add.png" alt="bt-add"">
+			<img src="resources/img/bt-add.png" alt="bt-add">
 		</div>
 		<!--登录/注销-->
 		<div id="bt-log">
-			<button class="is-login is-logout" onclick="ShowLogin();">登录</button>
+			<button id="log-status" onclick="Log();">登录</button>
 		</div>
 	</div>
 </header>
 
 <main>
 	<div id="edit-part" class="hide">
-		<form id="new-msg-form">
+		<div id="new-msg-form">
 			<textarea id="edit-area" placeholder="谈谈最近的新鲜事吧.."></textarea>
 			<div id="edit-bt-area">
 				<!--限制上传文件类型为png, jpg, jpeg-->
@@ -35,7 +35,7 @@
 				<input type="button" id="bt-post-new-msg" value="确定">
 				<input type="button" id="bt-cancel-post" onclick="HideAll();" value="取消">
 			</div>
-		</form>
+		</div>
 	</div>
 
 	<!--消息显示部分-->
@@ -96,7 +96,7 @@
 	<div id="shade" class="bg hide"></div>
 	<!--登录弹窗-->
 	<div id="login" class="modal hide">
-		<form method="get" id="login-form">
+		<div id="login-form">
 			<!--弹窗标题栏，由返回图标与标题内容组成-->
 			<div class="first-p">
 				<img class="bt-close" src="resources/img/bt-close.png" onclick="HideAll();">
@@ -117,7 +117,7 @@
 			<div class="op-bt">
 				<input id="bt-login" class="bt-submit" type="submit" value="登录" onclick="Login();">
 			</div>
-		</form>
+		</div>
 		<div class="tips" id="go-to-register">还没有账号？<a onclick="ShowRegister();">去注册</a>！</div>
 	</div>
 
@@ -127,7 +127,7 @@
 			<img class="bt-close" src="resources/img/bt-close.png" onclick="HideAll();">
 			<span>注册</span>
 		</div>
-		<form method="post" id="register-form">
+		<div id="register-form">
 			<!--输入用户名-->
 			<div class="input-box">用户：
 				<input id="register-username" type="text" onblur="onBlur_username();" onfocus="onFocus_username();"/></div>
@@ -147,7 +147,7 @@
 			<div class="op-bt">
 				<input class="bt-submit" type="submit" value="注册" onclick="Register();">
 			</div>
-		</form>
+		</div>
 		<div class="tips" id="go-to-login">已有账号？现在<a onclick="ShowLogin();">去登录</a>！</div>
 	</div>
 </div>
@@ -155,6 +155,7 @@
 <script src="/resources/js/jquery.js"></script>
 <script src="/js/util.js"></script>
 <script src="/js/data/timeline.js"></script>
+<script src="/js/data/login.js"></script>
 <script src="/js/timeline.js"></script>
 <script src="/js/login_register_form.js"></script>
 </body>

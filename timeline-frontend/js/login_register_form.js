@@ -1,9 +1,20 @@
+function Log(){
+
+    document.getElementById('shade').classList.remove('hide');
+    document.getElementById('login').classList.remove('hide');
+}
+
 function ShowLogin(){
+    document.getElementById('login-pwd').value = "";
+    document.getElementById('login-username').value = "";
     document.getElementById('shade').classList.remove('hide');
     document.getElementById('login').classList.remove('hide');
     document.getElementById('register').classList.add('hide');
 }
 function ShowRegister(){
+    document.getElementById('register-pwd').value = "";
+    document.getElementById('register-username').value = "";
+    document.getElementById('register-confirm-pwd').value = "";
     document.getElementById('shade').classList.remove('hide');
     document.getElementById('register').classList.remove('hide');
     document.getElementById('login').classList.add('hide');
@@ -107,33 +118,71 @@ function onFocus_confirm_pwd() {
  * @constructor
  */
 function Login() {
-    var username = document.getElementById('login-username').value;
+    var user = document.getElementById('login-username').value;
     var pwd = document.getElementById('login-pwd').value;
-    getUser(successCallback);
+    // getUser(successCallback);
+    //
+    // function successCallback(res) {
+    //
+    // }
 
-    function successCallback(res) {
-        console.log(res);
-    }
+    $.ajax({
+        url: 'http://47.100.239.92:3000/login',
+        data: {"username": user},
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+            if(typeof (data.res) === "undefined" || data.res.length === 0) {
+                alert("用户不存在！");
+                console.log("----no such user----");
+            } else {
+                var cmp = data.res["0"].password;
+                // console.log(cmp);
+                if(pwd === cmp) {
+                    window.location.href="";
+                    document.getElementById('log-status').innerText = "注销";
+                    console.log("----login success----");
+                } else {
+                    alert("密码输入错误！");
+                    console.log("----wrong password----");
+                }
+            }
+        }
+    })
 }
 
 function Register() {
-    var username = document.getElementById('register-username').value;
+    var user = document.getElementById('register-username').value;
+    console.log(user);
     var pwd = document.getElementById('register-pwd').value;
     var confirmpwd = document.getElementById('register-confirm-pwd').value;
-    if(!username) {
+    if(!user) {
         alert("用户名不能为空！");
-        return false;
     } else if(!pwd) {
         alert("密码不能为空！");
-        return false;
     } else if(!confirmpwd) {
         alert("请确认密码");
-        return false;
+    } else if(pwd != confirmpwd) {
+        alert("两次密码不一致");
     } else {
-        getUser(successCallback);
-        function successCallback() {
-
-        }
+        // var data = {"username": user, "password": pwd};
+        // postUser(data);
+        $.ajax({
+            url: 'http://47.100.239.92:3000/register',
+            data: {"username": user, "password": pwd},
+            type: "POST",
+            dataType: "json",
+            success: function(data) {
+                if(data) {
+                    if(data.code == "001") {
+                        alert("该用户名已经存在");
+                    } else if(data.code == "000") {
+                        alert("注册成功！");
+                    }
+                }
+                console.log("----register success----");
+            }
+        })
     }
 
 }

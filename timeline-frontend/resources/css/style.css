@@ -55,7 +55,7 @@ main {
 	height: 19px;
 }
 
-#bt-log button {
+#log-status {
 	font-size: 14px;
 	color: white;
 	font-weight: bold;
@@ -63,6 +63,7 @@ main {
 	border-radius: 10px;
 	border-style: none;
 }
+
 
 #timeline-part {
 	display: flex;

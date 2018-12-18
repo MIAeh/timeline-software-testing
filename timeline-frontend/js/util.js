@@ -10,15 +10,17 @@ function get(url, successCallback, dataType) {
     })
 }
 
-function post(url, successCallback, dataType) {
+function post(url, successCallback, errorCallback, dataType) {
     $.post({
         "url": url,
         "contentType": dataType,
-        "success": function (oRes) {
-            successCallback(oRes);
+        "success": function () {
+            successCallback();
+        },
+        "error": function () {
+            errorCallback();
         }
     })
-
 }
 
 function timeTrans(timestamp) {

@@ -1,4 +1,5 @@
 function getUser(successCallback) {
-    var sUrl = sDomain + "mockdata/users.json"
-    get(sUrl, successCallback);
+    var sUrl = sDomain + "/login";
+    var sDataType = "application/json";
+    get(sUrl, successCallback, sDataType);
 }
