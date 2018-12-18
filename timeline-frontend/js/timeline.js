@@ -3,7 +3,7 @@
  */
 $(document).ready(function() {
     $.ajax({
-        "url": "http://47.100.239.92:3000/messages",
+        "url": "http://www.ecnu-joyin.top:3000/messages",
         "type": "GET",
         "success": function (oRes) {
             console.log(oRes);
@@ -61,7 +61,7 @@ $(document).ready(function() {
         }
         if(content.value) {
             $.ajax ({
-                "url": "http://47.100.239.92:3000/publish",
+                "url": "http://www.ecnu-joyin.top:3000/publish",
                 "data": formData,
                 "dataType": "json",
                 "type": "POST",
