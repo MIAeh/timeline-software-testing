@@ -7,7 +7,7 @@
 - 技术框架：Node.js搭建Web端框架，通过框架内方法连接Mysql，通过Electron转换为桌面应用。
 - 环境部署：nodeJS，npm，express，express-generator，intelliJ IDEA
   代码中'node_modules'文件夹为配置文件。   
-  具体部署步骤详见：系统部署说明.md
+  具体部署步骤详见：[系统部署说明.md](./系统部署说明.md)
 
 
 ## 时间安排
@@ -61,6 +61,7 @@
 - 代码
    - [网页版](./timeline-frontend)
    - [桌面版](./electron-timeline)
+   - [后端数据库]
 - 代码测试
    - 测试代码
    - 覆盖度报告
