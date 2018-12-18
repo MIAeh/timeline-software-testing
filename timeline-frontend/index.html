@@ -5,7 +5,7 @@
 	<!--public文件夹下的样式/图片/js，相对路径只需要输入public之后的即可-->
 	<link rel="stylesheet" type="text/css" href="/resources/css/style.css">
 </head>
-<body>
+<body onload="checkCookie();">
 <!--标题、导航栏-->
 <header id="title-part">
 	<div><a id="title-content">Timeline</a></div>
@@ -20,7 +20,7 @@
 		</div>
 		<!--登录/注销-->
 		<div id="bt-log">
-			<button id="log-status" onclick="Log();">登录</button>
+			<button id="log-status" onclick="Log();"></button>
 		</div>
 	</div>
 </header>
@@ -157,6 +157,7 @@
 <script src="/js/data/timeline.js"></script>
 <script src="/js/data/login.js"></script>
 <script src="/js/timeline.js"></script>
+<script src="/js/cookie.js"></script>
 <script src="/js/login_register_form.js"></script>
 </body>
 </html>

@@ -1,7 +1,15 @@
 function Log(){
+    if(document.getElementById('log-status').innerText === "登录") {
+        document.getElementById('shade').classList.remove('hide');
+        document.getElementById('login').classList.remove('hide');
+    } else {
+        if(window.confirm("确定退出？")) {
+            document.cookie = "user=";
+            document.getElementById('log-status').innerText = "登录";
+            window.location.href = "";
+        }
+    }
 
-    document.getElementById('shade').classList.remove('hide');
-    document.getElementById('login').classList.remove('hide');
 }
 
 function ShowLogin(){
@@ -139,8 +147,11 @@ function Login() {
                 var cmp = data.res["0"].password;
                 // console.log(cmp);
                 if(pwd === cmp) {
-                    window.location.href="";
+                    //设置cookie
+                    setCookie(user);
+                    console.log(getCookie());
                     document.getElementById('log-status').innerText = "注销";
+                    window.location.href = "";
                     console.log("----login success----");
                 } else {
                     alert("密码输入错误！");
@@ -178,6 +189,7 @@ function Register() {
                         alert("该用户名已经存在");
                     } else if(data.code == "000") {
                         alert("注册成功！");
+                        ShowLogin();
                     }
                 }
                 console.log("----register success----");

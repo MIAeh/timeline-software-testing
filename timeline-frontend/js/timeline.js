@@ -2,17 +2,23 @@ var content = document.getElementById('edit-area');
 var list = document.getElementById('timelines');
 $(document).ready(function() {
     $('#bt-add').click(function () {
-        if(document.getElementById('edit-part').classList.contains('hide')) {
-            document.getElementById('edit-part').classList.remove('hide');
+        if(getCookie() !== "") {
+            if(document.getElementById('edit-part').classList.contains('hide')) {
+                document.getElementById('edit-part').classList.remove('hide');
+            } else {
+                document.getElementById('edit-part').classList.add('hide');
+            }
         } else {
-            document.getElementById('edit-part').classList.add('hide');
+            alert("请先登录！");
+            ShowLogin();
         }
     });
 
     $("#bt-post-new-msg").click(function() {
         if(content.value) {
             var li = document.createElement('li');
-            li.innerHTML = '<li class="timeline-listItem"><div class="msg"><p class="msg-title"><span class="msg-user">aaa</span>' +
+            li.innerHTML = '<li class="timeline-listItem"><div class="msg"><p class="msg-title">' +
+                '<span class="msg-user">' + getCookie() + '</span>' +
                 '<span class="msg-time">刚刚</span></p>' +
                 '<p class="msg-content">' + content.value + '</p></div></li>';
             list.insertBefore(li, list.children[0]);
