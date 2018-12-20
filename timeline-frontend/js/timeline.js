@@ -97,10 +97,21 @@ $(document).ready(function() {
 
     $("#bt-load").click(function(){
         var list = document.getElementById('timelines').childNodes;
-        for(var a = list.length - 1; a >= 0; a--) {
-            if(list.item(a).classList.contains('hide')) {
-                list.item(a).classList.remove('hide');
+        var len = list.length;
+        console.log(len);
+        console.log(list.item(len - 6).classList.contains('hide'));
+        if(list.item(6).classList.contains('hide')) {
+            for(var a = 6; a < len; a++) {
+                if(list.item(a).classList.contains('hide')) {
+                    list.item(a).classList.remove('hide');
+                }
             }
+            $("#bt-load").innerText = "收起";
+        } else {
+            for(var a = 6; a < len; a++) {
+                list.item(a).classList.add('hide');
+            }
+            $("#bt-load").innerText = "更多...";
         }
     });
 });
