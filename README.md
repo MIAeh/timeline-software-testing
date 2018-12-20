@@ -4,9 +4,12 @@
 ## 简介
 部署Web端和桌面应用端简单Timeline应用，同时进行系统测试、性能和测试代码自测试。
 - 更新日志&人员分配：腾讯文档 https://docs.qq.com/doc/DY2hVZmxhYk1PaGx2
-- 技术框架：Node.js搭建Web端框架，通过框架内方法连接Mysql，通过Electron转换为桌面应用。
+- 技术框架：   
+   - Web前端使用HTML5+CSS3+Javascript+JQuery构建页面，通过Electron在原有Web前端基础上进行修改和适配，转换为桌面应用。
+   - Web和桌面端后端共享，使用Node.js的Express框架搭建，使用node-mysql与数据库联通。
+   - 前后端交互使用API进行JSON数据交换
 - 环境部署：nodeJS，npm，express，express-generator，intelliJ IDEA
-  代码中'node_modules'文件夹为配置文件。   
+  代码中'node_modules'文件夹为框架配置文件。   
   具体部署步骤详见：[系统部署说明.md](./系统部署说明.md)
 
 
