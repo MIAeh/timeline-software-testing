@@ -106,12 +106,12 @@ $(document).ready(function() {
                     list.item(a).classList.remove('hide');
                 }
             }
-            $("#bt-load").innerText = "收起";
+            $("#bt-load").text("收起");
         } else {
             for(var a = 6; a < len; a++) {
                 list.item(a).classList.add('hide');
             }
-            $("#bt-load").innerText = "更多...";
+            $("#bt-load").text("更多...");
         }
     });
 });
