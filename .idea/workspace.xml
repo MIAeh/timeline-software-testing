@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86233b03-4d78-4849-a2cc-85f007742181" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timeline-frontend/js/timeline.js" afterPath="$PROJECT_DIR$/timeline-frontend/js/timeline.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/系统部署说明.md" afterPath="$PROJECT_DIR$/系统部署说明.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,8 +73,8 @@
         <entry file="file://$PROJECT_DIR$/系统部署说明.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="210">
-                <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+              <first_editor relative-caret-position="240">
+                <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -768,12 +766,12 @@
       <workItem from="1544873407175" duration="47348000" />
       <workItem from="1545108028007" duration="17975000" />
       <workItem from="1545232683072" duration="1047000" />
-      <workItem from="1545299007577" duration="1181000" />
+      <workItem from="1545299007577" duration="1285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71068000" />
+    <option name="totallyTimeSpent" value="71172000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -1120,8 +1118,8 @@
     <entry file="file://$PROJECT_DIR$/系统部署说明.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="210">
-            <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <first_editor relative-caret-position="240">
+            <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
             <folding />
           </first_editor>
           <second_editor />
