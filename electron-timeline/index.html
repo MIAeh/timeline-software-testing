@@ -2,21 +2,22 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
 	<title>Timeline</title>
+	<meta charset="UTF-8">
 	<!--public文件夹下的样式/图片/js，相对路径只需要输入public之后的即可-->
-	<link rel="stylesheet" type="text/css" href="app/resources/timeline-frontend/resources/css/style.css">
+	<link rel="stylesheet" type="text/css" href="app/resources/resources/css/style.css">
 </head>
 <body onload="checkCookie();">
 <!--标题、导航栏-->
-<header id="title-part">
+<header>
 	<div><a id="title-content">Timeline</a></div>
 	<div id="buttons">
 		<!--更新消息显示区内容，展示新消息-->
 		<div id="bt-refresh">
-			<img src="app/resources/timeline-frontend/resources/img/bt-refresh.png" alt="bt-refresh">
+			<img src="app/resources/resources/img/bt-refresh.png" alt="bt-refresh">
 		</div>
 		<!--编辑个人新消息部分，游客状态无法使用-->
 		<div id="bt-add">
-			<img src="app/resources/timeline-frontend/resources/img/bt-add.png" alt="bt-add">
+			<img src="app/resources/resources/img/bt-add.png" alt="bt-add">
 		</div>
 		<!--登录/注销-->
 		<div id="bt-log">
@@ -44,7 +45,7 @@
 	<div id="timeline-part">
 
 		<ul id="timelines"></ul>
-		<div><button id="bt-load">更多...</button></div>
+		<!--<div><button id="bt-load">更多...</button></div>-->
 	</div>
 </main>
 
@@ -57,7 +58,7 @@
 		<div id="login-form">
 			<!--弹窗标题栏，由返回图标与标题内容组成-->
 			<div class="first-p">
-				<img class="bt-close" src="app/resources/timeline-frontend/resources/img/bt-close.png" onclick="HideAll();">
+				<img class="bt-close" src="app/resources/resources/img/bt-close.png" onclick="HideAll();">
 				<span>登录</span>
 			</div>
 			<!--输入用户名-->
@@ -82,7 +83,7 @@
 	<!--注册弹窗-->
 	<div id="register" class="modal hide">
 		<div class="first-p">
-			<img class="bt-close" src="app/resources/timeline-frontend/resources/img/bt-close.png" onclick="HideAll();">
+			<img class="bt-close" src="app/resources/resources/img/bt-close.png" onclick="HideAll();">
 			<span>注册</span>
 		</div>
 		<div id="register-form">
@@ -112,14 +113,15 @@
 
 <!--改变jquery引用方式，解决与electron中'$'冲突-->
 <script>
-    window.$ = window.jQuery = require('./app/resources/timeline-frontend/resources/js/jquery.js');
+    window.$ = window.jQuery = require('./app/resources/resources/js/jquery.js');
 </script>
-<script src="app/resources/timeline-frontend/js/util/cookie.js"></script>
-<script src="app/resources/timeline-frontend/js/util/httpUtil.js"></script>
-<script src="app/resources/timeline-frontend/js/util/timeline-item.js"></script>
-<script src="app/resources/timeline-frontend/js/data/timeline.js"></script>
-<script src="app/resources/timeline-frontend/js/data/login.js"></script>
-<script src="app/resources/timeline-frontend/js/timeline.js"></script>
-<script src="app/resources/timeline-frontend/js/log.js"></script>
+
+<script src="app/resources/js/util/cookie.js"></script>
+<script src="app/resources/js/util/httpUtil.js"></script>
+<script src="app/resources/js/util/timeline-item.js"></script>
+<script src="app/resources/js/data/timeline.js"></script>
+<script src="app/resources/js/data/login.js"></script>
+<script src="app/resources/js/timeline.js"></script>
+<script src="app/resources/js/log.js"></script>
 </body>
 </html>

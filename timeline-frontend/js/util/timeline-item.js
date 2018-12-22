@@ -37,7 +37,7 @@ function timeTrans(timestamp) {
     } else if(diffWeek >= 1 && diffWeek <= 3) {
         result = parseInt(diffWeek) + "周前";
     } else if(diffDay >= 1 && diffDay <= 6) {
-        result = parseInt(diffDay) + "日前";
+        result = parseInt(diffDay) + "天前";
     } else if(diffHour >= 1 && diffHour <= 23) {
         result = parseInt(diffHour) + "小时前";
     } else if(diffMin >= 1 && diffMin <= 59) {

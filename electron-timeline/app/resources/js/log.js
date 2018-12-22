@@ -135,7 +135,7 @@ function Login() {
     // }
 
     $.ajax({
-        "url": 'http://47.100.239.92:3000/login',
+        "url": 'http://www.ecnu-joyin.top:3000/login',
         "data": {"username": user},
         "type": "GET",
         "dataType": "json",
@@ -179,7 +179,7 @@ function Register() {
         // var data = {"username": user, "password": pwd};
         // postUser(data);
         $.ajax({
-            "url": 'http://47.100.239.92:3000/register',
+            "url": 'http://www.ecnu-joyin.top:3000/register',
             "data": {"username": user, "password": pwd},
             "type": "POST",
             "dataType": "json",

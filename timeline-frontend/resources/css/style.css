@@ -10,9 +10,10 @@ body {
 main {
 	width: 100%;
 	height: calc(100% - 70px);
+	padding-top: 51px;
 }
 
-#title-part {
+header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -22,6 +23,8 @@ main {
 	width: 100%;
 	margin-bottom: 20px;
 	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: fixed;
+	z-index: 1000;
 }
 
 #title-content {
