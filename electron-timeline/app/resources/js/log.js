@@ -4,7 +4,7 @@ function Log(){
         document.getElementById('login').classList.remove('hide');
     } else {
         if(window.confirm("确定要注销吗？")) {
-            document.cookie = "user=";
+            clearCookie();
             document.getElementById('log-status').innerText = "登录";
             window.location.href = "";
         }
