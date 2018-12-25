@@ -20,7 +20,7 @@ $(document).ready(function() {
                 if(count > 4) {
                     new_li.classList.add('hide');
                 }
-                list.append(new_li);
+                list.appendChild(new_li);
             }
         }
     });
@@ -117,7 +117,7 @@ $(document).ready(function() {
        if (viewH - contentH - scrollTop <= 100 && flag) {
            flag = 0;
            showMore();
-           page++;
+           page ++;
        }
     });
 });
