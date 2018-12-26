@@ -3,7 +3,7 @@ use timeline;
 drop table if exists account;
 drop table if exists message;
 create table account (
-username varchar(30) not null ,
+username varchar(30) binary not null ,
 password varchar(50),
 primary key (username)
 );
