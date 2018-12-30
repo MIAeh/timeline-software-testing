@@ -6,7 +6,7 @@ function Log(){
         if(window.confirm("确定要注销吗？")) {
             clearCookie();
             document.getElementById('log-status').innerText = "登录";
-            window.location.href = "";
+            refresh();
         }
     }
 
@@ -151,7 +151,8 @@ function Login() {
                     setCookie(user);
                     console.log(getCookie());
                     document.getElementById('log-status').innerText = getCookie();
-                    window.location.href = "";
+                    HideAll();
+                    refresh();
                     console.log("----login success----");
                 } else {
                     alert("密码输入错误！");

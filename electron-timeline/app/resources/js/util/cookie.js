@@ -1,21 +1,22 @@
 function getCookie() {
-    $.getJSON('electron-timeline/app/resources/js/data/user.json', function (data) {
-        var check = data["username"];
+    // $.getJSON('../data/user.js', function (data) {
+    //     var check = data["username"];
+    //     console.log(window.href);
+    //     console.log(check);
+    //     return check;
+    // })
+    var check = window.mockData.user["username"];
+        console.log(window.href);
         console.log(check);
         return check;
-    })
 }
 
 function setCookie(cUser) {
-    $.getJSON('electron-timeline/app/resources/js/data/user.json', function (data) {
-        data["username"] = cUser;
-    })
+    window.mockData.user["username"] = cUser;
 }
 
 function clearCookie() {
-    $.getJSON('electron-timeline/app/resources/js/data/user.json', function (data) {
-        data["username"] = "";
-    })
+    window.mockData.user["username"] = "";
 }
 
 
