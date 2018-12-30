@@ -120,7 +120,7 @@ header {
 /**
  ** 设置光标效果
  */
-#title-part div, #title-part button, .modal .first-p img, #bt-load, .bt-submit, .tips a, #edit-bt-area input{
+#title-part div, #title-part button, .modal .first-p img, #bt-load, .bt-submit, .tips a, #edit-bt-area input, #bt-log, #bt-load, #bt-refresh{
 	cursor: pointer;
 }
 
@@ -266,7 +266,7 @@ textarea {
 	background-color: transparent;
 	width: 93%;
 	min-height: 60px;
-	border-color: #EDEDED;
+	border-color: #EDEDED;;
 	border-radius: 10px;
 	font-size: 16px;
 }
@@ -286,7 +286,6 @@ textarea {
 
 
 #edit-bt-area input {
-	margin-top: 15px;
 	margin-bottom: 15px;
 }
 
@@ -303,10 +302,17 @@ textarea {
 	font-weight: bold;
 	background-color: slategrey;
 	width: 45px;
-	height: 20px;
+	height: 22px;
 	border-radius: 10px;
 }
 
 #bt-cancel-post {
 	margin-left: 5px;
+}
+
+#c-count {
+	position: relative;
+	left: 90%;
+	font-size: 12px;
+	color: grey;
 }

@@ -18,7 +18,7 @@ function timeTrans(timestamp) {
     var year = month * 12;
 
     var now = new Date().getTime();
-    console.log(now.toString());
+    // console.log(now.toString());
     var diff = now - timestamp;
 
     var diffMin = diff / min;

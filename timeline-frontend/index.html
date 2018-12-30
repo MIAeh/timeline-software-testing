@@ -6,7 +6,7 @@
 	<!--public文件夹下的样式/图片/js，相对路径只需要输入public之后的即可-->
 	<link rel="stylesheet" type="text/css" href="resources/css/style.css">
 </head>
-<body onload="checkCookie();">
+<body>
 <!--标题、导航栏-->
 <header>
 	<div><a id="title-content">Timeline</a></div>
@@ -29,10 +29,14 @@
 <main>
 	<div id="edit-part" class="hide">
 		<form id="new-msg-form" enctype="multipart/form-data">
-			<textarea id="edit-area" name="content" placeholder="谈谈最近的新鲜事吧.."></textarea>
+			<div id="edit-text-area">
+				<textarea id="edit-area" name="content" placeholder="谈谈最近的新鲜事吧.."></textarea>
+				<!--统计字数-->
+				<p id="c-count"><span id="c-left">0</span>/120</p>
+			</div>
 			<div id="edit-bt-area">
 				<!--限制上传文件类型为png, jpg, jpeg-->
-				<input type="file" id="bt-upload-img" name="picture" accept=".jpg, .jpeg, .png" value="图片"/>
+				<input type="file" id="bt-upload-img" name="picture" accept="image/*, .jpg, .jpeg, .png" value="图片"/>
 				<div id="edit-bt-opt">
 					<input type="button" id="bt-post-new-msg" value="确定">
 					<input type="button" id="bt-cancel-post" onclick="HideAll();" value="取消">
@@ -45,7 +49,7 @@
 	<div id="timeline-part">
 
 		<ul id="timelines"></ul>
-		<!--<div><button id="bt-load">更多...</button></div>-->
+		<div><button id="bt-load">更多...</button></div>
 	</div>
 </main>
 

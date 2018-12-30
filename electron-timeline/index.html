@@ -29,7 +29,11 @@
 <main>
 	<div id="edit-part" class="hide">
 		<form id="new-msg-form" enctype="multipart/form-data">
-			<textarea id="edit-area" name="content" placeholder="谈谈最近的新鲜事吧.."></textarea>
+			<div id="edit-text-area">
+				<textarea id="edit-area" name="content" placeholder="谈谈最近的新鲜事吧.."></textarea>
+				<!--统计字数-->
+				<p id="c-count"><span id="c-left">0</span>/120</p>
+			</div>
 			<div id="edit-bt-area">
 				<!--限制上传文件类型为png, jpg, jpeg-->
 				<input type="file" id="bt-upload-img" name="picture" accept=".jpg, .jpeg, .png" value="图片"/>
@@ -45,7 +49,7 @@
 	<div id="timeline-part">
 
 		<ul id="timelines"></ul>
-		<!--<div><button id="bt-load">更多...</button></div>-->
+		<div><button id="bt-load">更多...</button></div>
 	</div>
 </main>
 

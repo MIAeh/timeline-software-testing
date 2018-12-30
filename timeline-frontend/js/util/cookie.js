@@ -17,6 +17,10 @@ function setCookie(cUser) {
     document.cookie = "user=" + cUser + "; " + expires;
 }
 
+function clearCookie() {
+    document.cookie = "user";
+}
+
 function checkCookie() {
     if(getCookie() !== "") {
         document.getElementById('log-status').innerText = getCookie();

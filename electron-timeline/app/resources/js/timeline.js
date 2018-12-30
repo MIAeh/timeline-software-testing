@@ -1,9 +1,10 @@
 /**
  * get新消息方法要写在ready里，防止刷新页面取消数据
  */
-var page = 2;
-var flag = 1;
 $(document).ready(function() {
+    checkCookie();
+    listenTextarea();
+    checkLoad();
     refresh();
 });
 
@@ -14,7 +15,7 @@ function refresh() {
         "success": function (oRes) {
             // var list = document.getElementById('timelines');
             // list.childNodes().remove();
-            var list = $("#timelines")
+            var list = $("#timelines");
             list.children().remove();
             var resLen = oRes.res.length;
             for (var i = resLen - 1; i >= 0; i--) {
@@ -49,6 +50,23 @@ $('#bt-add').click(function () {
 });
 
 /**
+ * 监听textarea字数：不超过120字
+ */
+function textCount(element) {
+    var value = element.value;
+    var len = value.length;
+    return len;
+}
+
+function listenTextarea() {
+    document.getElementById('edit-area').addEventListener('input', function () {
+        var newValue = document.getElementById('edit-area').value.substring(0, 120);
+        $('#edit-area').val(newValue);
+        document.getElementById('c-left').innerText = textCount(this);
+    })
+}
+
+/**
  * 发布新消息button
  */
 $("#bt-post-new-msg").click(function() {
@@ -61,6 +79,11 @@ $("#bt-post-new-msg").click(function() {
     if(fileDom.value === "") {
         formData.append("picture", "");
     } else {
+        if(fileDom.files[0].size > 1024 * 1024 * 4) {
+            alert("图片大小不能超过4MB!");
+            document.getElementById('bt-upload-img').value = "";
+            return;
+        }
         var pic = fileDom.files[0];
         formData.append("picture", pic);
     }
@@ -72,7 +95,7 @@ $("#bt-post-new-msg").click(function() {
             "type": "POST",
             "contentType": false,
             "processData": false,
-            "success": function(oRes) {
+            "success": function() {
                 alert("发布成功~");
                 refresh();
             }
@@ -81,6 +104,7 @@ $("#bt-post-new-msg").click(function() {
         //清空消息输入栏
         content.value = "";
         document.getElementById('bt-upload-img').value = "";
+        document.getElementById('c-left').innerText = "0";
     } else {
         alert('请输入内容再发送~');
     }
@@ -100,6 +124,21 @@ $("#bt-refresh").click(function () {
     refresh();
 });
 
+/**
+ * 加载button
+ */
+function checkLoad() {
+    if(document.getElementById('timelines').childNodes.length < 12) {
+        document.getElementById('bt-load').classList.add('hide');
+    } else {
+        document.getElementById('bt-load').classList.remove('hide');
+    }
+}
+
+$("#bt-load").click(function () {
+    showMore();
+});
+
 function showMore() {
     var list = document.getElementById('timelines').childNodes;
     var len = list.length;
@@ -109,22 +148,25 @@ function showMore() {
                 list.item(a).classList.remove('hide');
             }
         }
+        document.getElementById('bt-load').text("更多...");
     } else {
         for(var a = 12; a < len; a++) {
             list.item(a).classList.add('hide');
         }
-
+        document.getElementById('bt-load').text("收起");
     }
 }
 
-$(document).scroll(function(){
-    var viewH = $(this).height(),
-        contentH = window.innerHeight,
-        scrollTop = $(this).scrollTop();
 
-    if (viewH - contentH - scrollTop <= 100 && flag) {
-        flag = 0;
-        showMore();
-        page ++;
-    }
-});
+
+// $(document).scroll(function(){
+//     var viewH = $(this).height(),
+//         contentH = window.innerHeight,
+//         scrollTop = $(this).scrollTop();
+//
+//     if (viewH - contentH - scrollTop <= 100 && flag) {
+//         flag = 0;
+//         showMore();
+//         page ++;
+//     }
+// });

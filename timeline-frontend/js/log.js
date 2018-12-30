@@ -9,7 +9,6 @@ function Log(){
             window.location.href = "";
         }
     }
-
 }
 
 function ShowLogin(){
@@ -19,6 +18,7 @@ function ShowLogin(){
     document.getElementById('login').classList.remove('hide');
     document.getElementById('register').classList.add('hide');
 }
+
 function ShowRegister(){
     document.getElementById('register-pwd').value = "";
     document.getElementById('register-username').value = "";
@@ -27,6 +27,7 @@ function ShowRegister(){
     document.getElementById('register').classList.remove('hide');
     document.getElementById('login').classList.add('hide');
 }
+
 function HideAll(){
     document.getElementById('shade').classList.add('hide');
     document.getElementById('login').classList.add('hide');
@@ -122,7 +123,7 @@ function onFocus_confirm_pwd() {
 }
 
 /**
- * 登录表格submit
+ * 登录submit
  * @constructor
  */
 function Login() {
@@ -149,9 +150,9 @@ function Login() {
                 if(pwd === cmp) {
                     //设置cookie
                     setCookie(user);
-                    console.log(getCookie());
+                    // console.log(getCookie());
                     document.getElementById('log-status').innerText = getCookie();
-                    window.location.href = "";
+                    HideAll();
                     console.log("----login success----");
                 } else {
                     alert("密码输入错误！");
@@ -164,17 +165,21 @@ function Login() {
 
 function Register() {
     var user = document.getElementById('register-username').value;
-    console.log(user);
+    // console.log(user);
     var pwd = document.getElementById('register-pwd').value;
     var confirmpwd = document.getElementById('register-confirm-pwd').value;
     if(!user) {
         alert("用户名不能为空！");
+    } else if(user.length > 30) {
+        alert("用户名不能大于12个字符！");
     } else if(!pwd) {
         alert("密码不能为空！");
     } else if(!confirmpwd) {
         alert("请确认密码");
     } else if(pwd != confirmpwd) {
         alert("两次密码不一致");
+    } else if(pwd.length > 15) {
+        alert("密码长度不能大于15");
     } else {
         // var data = {"username": user, "password": pwd};
         // postUser(data);
