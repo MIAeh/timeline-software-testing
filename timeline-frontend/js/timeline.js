@@ -4,7 +4,6 @@
 $(document).ready(function() {
     checkCookie();
     listenTextarea();
-    checkLoad();
     refresh();
 });
 
@@ -25,8 +24,10 @@ function refresh() {
                 var timestamp = oRes.res[i].time;
                 var new_li = createTimelineItem(user, con, pic, timestamp);
                 var count = ($("li").length);
-                if(count > 10) {
+                // console.log(count);
+                if(count > 5) {
                     new_li.classList.add('hide');
+                    document.getElementById('bt-load').classList.remove('hide');
                 }
                 list.append(new_li);
             }
@@ -124,36 +125,26 @@ $("#bt-refresh").click(function () {
     refresh();
 });
 
-/**
- * 加载button
- */
-function checkLoad() {
-    if(document.getElementById('timelines').childNodes.length < 12) {
-        document.getElementById('bt-load').classList.add('hide');
-    } else {
-        document.getElementById('bt-load').classList.remove('hide');
-    }
-}
 
 $("#bt-load").click(function () {
-   showMore();
+    showMore();
 });
 
 function showMore() {
     var list = document.getElementById('timelines').childNodes;
     var len = list.length;
-    if(list.item(12).classList.contains('hide')) {
-        for(var a = 12; a < len; a++) {
+    if(list.item(6).classList.contains('hide')) {
+        for(var a = 6; a < len; a++) {
             if(list.item(a).classList.contains('hide')) {
                 list.item(a).classList.remove('hide');
             }
         }
-        document.getElementById('bt-load').text("更多...");
+        $('#bt-load').text("收起");
     } else {
-        for(var a = 12; a < len; a++) {
+        for(var a = 6; a < len; a++) {
             list.item(a).classList.add('hide');
         }
-        document.getElementById('bt-load').text("收起");
+        $('#bt-load').text("更多...");
     }
 }
 
