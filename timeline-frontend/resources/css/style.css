@@ -69,7 +69,7 @@ header {
 #timeline-part {
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 	position: relative;
 	min-height: calc(100% - 170px);
 	max-width: 900px;
