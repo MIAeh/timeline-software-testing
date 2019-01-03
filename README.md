@@ -2,13 +2,16 @@
 
 
 ## 简介
-部署Web端和桌面应用端简单Timeline应用，同时进行系统测试、性能和测试代码自测试。
-- 更新日志&人员分配：腾讯文档 https://docs.qq.com/doc/DY2hVZmxhYk1PaGx2
+Web端和桌面应用端的简单Timeline应用，同时进行系统测试、性能和测试代码自测试。
+- 项目成果：
+   - Web版：外部可访问网址 [http://www.ecnu-joyin.top/timeline-frontend/](http://www.ecnu-joyin.top/timeline-frontend/)
+   - 桌面版：可执行文件
 - 技术框架：   
    - Web前端使用HTML5+CSS3+Javascript+JQuery构建页面，通过Electron在原有Web前端基础上进行修改和适配，转换为桌面应用
    - Web和桌面端后端共享，使用Node.js的Express框架搭建，使用node-mysql与数据库联通
    - 前后端交互使用API进行JSON数据交换
-- 环境部署：nodeJS，npm，express，express-generator，intelliJ IDEA
+   - 后端将数据库部署在云端服务器，将web代码部署在外部可访问域名上
+- 环境部署：nodeJS，npm，express，express-generator，electron，electron packager，IDE（intelliJ IDEA）
   代码中'node_modules'文件夹为框架配置文件。   
   具体部署步骤详见：[系统部署说明.md](./系统部署说明.md)
 
@@ -21,8 +24,9 @@
    
 - 迭代方式与周期：
 以1周为一个迭代周期（12/2起）：每周六进行meeting&完成度确认&下周任务安排
-   - 前两周（12/2~12/16）：集中进行部署数据库、开发和代码自测试
-   - 后两周（12/17~12/31）：进行代码优化和修改，集中进行测试
+   - 12/2~12/16：集中进行部署数据库、开发和代码自测试
+   - 12/17~12/24：进行代码联调、部署、测试思想确定
+   - 12/24~1/7：进行代码优化和修改，集中进行测试
    - 剩余：进行更新、完善、文档撰写
 
 
@@ -65,12 +69,13 @@
    - [网页版](./timeline-frontend)
    - [桌面版](./electron-timeline)
    - [后端](./timeline-backend)
+
+
+### 测试
 - 代码测试
    - 测试代码
    - 覆盖度报告
    - 静态测试报告
-
-### 测试
 - 系统测试
    - 系统测试计划
    - 系统测试报告
