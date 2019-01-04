@@ -1417,6 +1417,1222 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "3f94a3ae-ea3a-4795-82f0-44587ea6fd82",
+    "name": "2-6-A",
+    "commands": [{
+      "id": "b7913c5b-e17d-4900-b41b-f999dc57def1",
+      "comment": "",
+      "command": "open",
+      "target": "/timeline-frontend/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20ea0f27-2426-47c0-8816-f60ddfb04c09",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "744x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68eeca42-d483-41d2-bc34-668e8bf14ccd",
+      "comment": "",
+      "command": "click",
+      "target": "id=log-status",
+      "targets": [
+        ["id=log-status", "id"],
+        ["css=#log-status", "css"],
+        ["css=#log-status", "css:finder"],
+        ["xpath=//button[@id='log-status']", "xpath:attributes"],
+        ["xpath=//div[@id='bt-log']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "edea9f2b-a344-4d6c-9a5e-ace83f1995f7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=去注册",
+      "targets": [
+        ["linkText=去注册", "linkText"],
+        ["css=#go-to-register > a", "css"],
+        ["css=#go-to-register > a", "css:finder"],
+        ["xpath=//a[contains(text(),'去注册')]", "xpath:link"],
+        ["xpath=//a[@onclick='ShowRegister();']", "xpath:attributes"],
+        ["xpath=//div[@id='go-to-register']/a", "xpath:idRelative"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3d6bd21-5035-4459-abda-c87fb8848fc8",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f730288-fb61-4c3a-82d9-027816f1e5fc",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "htx"
+    }, {
+      "id": "98ab257a-023a-4d1b-874d-16b80ac83040",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13d44b63-0dd7-4b6b-b3fc-953f8e221beb",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "123456h"
+    }, {
+      "id": "a19e3a94-64b2-43e8-9c65-857830b1de67",
+      "comment": "",
+      "command": "click",
+      "target": "id=register",
+      "targets": [
+        ["id=register", "id"],
+        ["css=#register", "css"],
+        ["css=#register", "css:finder"],
+        ["xpath=//div[@id='register']", "xpath:attributes"],
+        ["xpath=//div[@id='layer']/div[3]", "xpath:idRelative"],
+        ["xpath=//body/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c29f34eb-5959-4b39-bbb5-f8ae830de668",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36c73620-87a0-4483-8bea-758725939531",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": "123456h"
+    }, {
+      "id": "fdbe235b-caeb-41a1-93e1-4527cbdbfda7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-form > div.op-bt",
+      "targets": [
+        ["css=#register-form > div.op-bt", "css"],
+        ["css=.op-bt:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='register-form']/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "412e476b-485d-45b4-9148-33497b2c1282",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-form > div.op-bt > input.bt-submit",
+      "targets": [
+        ["css=#register-form > div.op-bt > input.bt-submit", "css"],
+        ["css=.op-bt:nth-child(7) > .bt-submit", "css:finder"],
+        ["xpath=//input[@value='注册']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73977674-104b-4337-8e63-373d7a3f3e43",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "该用户名已经存在",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "dacdbdda-8a68-4858-8203-c9480e786c94",
+    "name": "2-3-C",
+    "commands": [{
+      "id": "38da61b8-b7ba-4922-b775-e68a509fc0e6",
+      "comment": "",
+      "command": "open",
+      "target": "/timeline-frontend/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4368283c-e32b-4246-952a-720046fbc619",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "744x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c150a4af-c3be-460c-8f54-125e09b6e5a3",
+      "comment": "",
+      "command": "click",
+      "target": "id=log-status",
+      "targets": [
+        ["id=log-status", "id"],
+        ["css=#log-status", "css"],
+        ["css=#log-status", "css:finder"],
+        ["xpath=//button[@id='log-status']", "xpath:attributes"],
+        ["xpath=//div[@id='bt-log']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98d1fd8d-4f15-4d58-bbae-36196f11dd64",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=去注册",
+      "targets": [
+        ["linkText=去注册", "linkText"],
+        ["css=#go-to-register > a", "css"],
+        ["css=#go-to-register > a", "css:finder"],
+        ["xpath=//a[contains(text(),'去注册')]", "xpath:link"],
+        ["xpath=//a[@onclick='ShowRegister();']", "xpath:attributes"],
+        ["xpath=//div[@id='go-to-register']/a", "xpath:idRelative"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21615a25-14d0-4c90-bbbb-d26e6777cb08",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1671007b-ca47-4b35-9801-813e9f0e0817",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "htxhtxhtxhtx"
+    }, {
+      "id": "81f03375-f537-46c4-b218-d6f9f0f84ccb",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbc8ba70-4988-4642-895d-abb7a4bf21d3",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "123456h"
+    }, {
+      "id": "27229585-2646-4a07-8b21-9cb11e328ee1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-form > div.op-bt",
+      "targets": [
+        ["css=#register-form > div.op-bt", "css"],
+        ["css=.op-bt:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='register-form']/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27c7e8a4-a48a-43b7-93d3-c02d3ecce527",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "93dc0548-9439-4a6f-895d-b43e1f88f6c5",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": "123456h"
+    }, {
+      "id": "40dfd891-e7e6-4b03-89f1-c7584a577e53",
+      "comment": "",
+      "command": "click",
+      "target": "id=register",
+      "targets": [
+        ["id=register", "id"],
+        ["css=#register", "css"],
+        ["css=#register", "css:finder"],
+        ["xpath=//div[@id='register']", "xpath:attributes"],
+        ["xpath=//div[@id='layer']/div[3]", "xpath:idRelative"],
+        ["xpath=//body/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a27415d5-85f9-4fc0-a765-8cd6844f6d90",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-form > div.op-bt > input.bt-submit",
+      "targets": [
+        ["css=#register-form > div.op-bt > input.bt-submit", "css"],
+        ["css=.op-bt:nth-child(7) > .bt-submit", "css:finder"],
+        ["xpath=//input[@value='注册']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb105b68-e5b8-4b29-83e5-9c518e695c3b",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "用户名不能超过10位",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ef7c566a-b30c-465c-9626-ced6ec642eb7",
+    "name": "2-4-B",
+    "commands": [{
+      "id": "3c6b0da5-f95a-4fb6-bba5-561d081c065b",
+      "comment": "",
+      "command": "open",
+      "target": "/timeline-frontend/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e072d20f-b764-4218-a54b-290424828203",
+      "comment": "",
+      "command": "click",
+      "target": "id=log-status",
+      "targets": [
+        ["id=log-status", "id"],
+        ["css=#log-status", "css"],
+        ["css=#log-status", "css:finder"],
+        ["xpath=//button[@id='log-status']", "xpath:attributes"],
+        ["xpath=//div[@id='bt-log']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90bb664a-9aa5-4731-bc7c-aceb263d3674",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=去注册",
+      "targets": [
+        ["linkText=去注册", "linkText"],
+        ["css=#go-to-register > a", "css"],
+        ["css=#go-to-register > a", "css:finder"],
+        ["xpath=//a[contains(text(),'去注册')]", "xpath:link"],
+        ["xpath=//a[@onclick='ShowRegister();']", "xpath:attributes"],
+        ["xpath=//div[@id='go-to-register']/a", "xpath:idRelative"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df0a943c-450f-4bfd-9496-8f08a1079202",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb296374-84d2-4f22-9c4f-6dcef32a8a87",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0642e8ff-ffb0-46a5-8feb-a316b2bd8ec5",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=register-username-reminder",
+      "targets": [
+        ["id=register-username-reminder", "id"],
+        ["css=#register-username-reminder", "css"],
+        ["css=#register-username-reminder", "css:finder"],
+        ["xpath=//p[@id='register-username-reminder']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"]
+      ],
+      "value": "请输入用户名"
+    }, {
+      "id": "450d3005-2815-49f8-9c22-493e472c1b98",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-pwd-reminder",
+      "targets": [
+        ["id=register-pwd-reminder", "id"],
+        ["css=#register-pwd-reminder", "css"],
+        ["css=#register-pwd-reminder", "css:finder"],
+        ["xpath=//p[@id='register-pwd-reminder']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/p[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/p[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60f23f67-4a6a-43e6-a980-a9c2907cc4be",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=register-pwd-reminder",
+      "targets": [
+        ["id=register-pwd-reminder", "id"],
+        ["css=#register-pwd-reminder", "css"],
+        ["css=#register-pwd-reminder", "css:finder"],
+        ["xpath=//p[@id='register-pwd-reminder']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/p[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/p[2]", "xpath:position"]
+      ],
+      "value": "请输入密码"
+    }, {
+      "id": "ad7c1cef-a6dc-4fc7-a2e2-ba6a633cbafc",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e137b719-658f-4afa-b34e-fe394929c00c",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-form > div.op-bt",
+      "targets": [
+        ["css=#register-form > div.op-bt", "css"],
+        ["css=.op-bt:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='register-form']/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8b88355-e921-4de1-82ef-b7d45d609697",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirm-pwd-reminder",
+      "targets": [
+        ["id=confirm-pwd-reminder", "id"],
+        ["css=#confirm-pwd-reminder", "css"],
+        ["css=#confirm-pwd-reminder", "css:finder"],
+        ["xpath=//p[@id='confirm-pwd-reminder']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/p[3]", "xpath:idRelative"],
+        ["xpath=//p[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b8df38c-59eb-4928-af48-e7d2eb792bca",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=confirm-pwd-reminder",
+      "targets": [
+        ["id=confirm-pwd-reminder", "id"],
+        ["css=#confirm-pwd-reminder", "css"],
+        ["css=#confirm-pwd-reminder", "css:finder"],
+        ["xpath=//p[@id='confirm-pwd-reminder']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/p[3]", "xpath:idRelative"],
+        ["xpath=//p[3]", "xpath:position"]
+      ],
+      "value": "请再输入一遍密码！"
+    }]
+  }, {
+    "id": "efde93a4-853a-48db-b698-7db06cc79d89",
+    "name": "2-7-A",
+    "commands": [{
+      "id": "ebe451c6-a236-4853-9fb8-49387d2fafd7",
+      "comment": "",
+      "command": "open",
+      "target": "/timeline-frontend/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e68fa54f-18e3-4154-a9fe-693067ea580a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "744x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "beab3607-f061-40d8-a5ae-f60735fb4cfd",
+      "comment": "",
+      "command": "click",
+      "target": "id=log-status",
+      "targets": [
+        ["id=log-status", "id"],
+        ["css=#log-status", "css"],
+        ["css=#log-status", "css:finder"],
+        ["xpath=//button[@id='log-status']", "xpath:attributes"],
+        ["xpath=//div[@id='bt-log']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0abac000-f130-4628-874b-1ca1621f16b4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=去注册",
+      "targets": [
+        ["linkText=去注册", "linkText"],
+        ["css=#go-to-register > a", "css"],
+        ["css=#go-to-register > a", "css:finder"],
+        ["xpath=//a[contains(text(),'去注册')]", "xpath:link"],
+        ["xpath=//a[@onclick='ShowRegister();']", "xpath:attributes"],
+        ["xpath=//div[@id='go-to-register']/a", "xpath:idRelative"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c28d11c6-0e26-4796-8c67-2ff168d6bf1f",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aac830b2-225b-43fe-890d-382db3df02ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "   "
+    }, {
+      "id": "1fab1877-a7e0-4df8-bb60-cca61d573a27",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbf13cfc-3ded-41a4-8693-3df2d013869b",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "123456h"
+    }, {
+      "id": "421ea092-a7de-4cbd-932d-1a82004d1779",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-form",
+      "targets": [
+        ["id=register-form", "id"],
+        ["css=#register-form", "css"],
+        ["css=#register-form", "css:finder"],
+        ["xpath=//div[@id='register-form']", "xpath:attributes"],
+        ["xpath=//div[@id='register']/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7c2ddef-6734-4f08-8e09-043df3138e50",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d89c528-4e57-44a0-a438-2ce6a2cf5d36",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": "123456h"
+    }, {
+      "id": "cfd01f0e-d8bc-4b2b-9b15-a95670a2a938",
+      "comment": "",
+      "command": "click",
+      "target": "id=register",
+      "targets": [
+        ["id=register", "id"],
+        ["css=#register", "css"],
+        ["css=#register", "css:finder"],
+        ["xpath=//div[@id='register']", "xpath:attributes"],
+        ["xpath=//div[@id='layer']/div[3]", "xpath:idRelative"],
+        ["xpath=//body/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3778fdb4-0558-4440-8e42-905b84b03784",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-form > div.op-bt > input.bt-submit",
+      "targets": [
+        ["css=#register-form > div.op-bt > input.bt-submit", "css"],
+        ["css=.op-bt:nth-child(7) > .bt-submit", "css:finder"],
+        ["xpath=//input[@value='注册']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15b745a1-1404-4b90-8622-4849861696e6",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "该用户名已经存在",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7ede9a42-e41e-4f5a-84b5-7d3ba1b63bb3",
+    "name": "2-7-C",
+    "commands": [{
+      "id": "437f0c1c-345c-48ac-8821-26b756fbf3fc",
+      "comment": "",
+      "command": "open",
+      "target": "/timeline-frontend/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39fb4973-7752-499c-9f3c-1e584b8f3677",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "744x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1edba4b-3d28-4e3a-91a1-5d5df049f57b",
+      "comment": "",
+      "command": "click",
+      "target": "id=log-status",
+      "targets": [
+        ["id=log-status", "id"],
+        ["css=#log-status", "css"],
+        ["css=#log-status", "css:finder"],
+        ["xpath=//button[@id='log-status']", "xpath:attributes"],
+        ["xpath=//div[@id='bt-log']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26cc44cf-3587-4627-8b15-d56f0c6c4f67",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=去注册",
+      "targets": [
+        ["linkText=去注册", "linkText"],
+        ["css=#go-to-register > a", "css"],
+        ["css=#go-to-register > a", "css:finder"],
+        ["xpath=//a[contains(text(),'去注册')]", "xpath:link"],
+        ["xpath=//a[@onclick='ShowRegister();']", "xpath:attributes"],
+        ["xpath=//div[@id='go-to-register']/a", "xpath:idRelative"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d08c7e97-5ee0-449d-9ce1-21901544a22c",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f1016ed-cec8-42a0-afa5-93b8e6cd2670",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "hhh "
+    }, {
+      "id": "bc2b36f4-7367-4b3d-a8d5-d1d4d9f7d914",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f41044e-caaf-4b00-9e70-08eeca96b7f1",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "123456h"
+    }, {
+      "id": "5d0288fe-c662-4475-90db-66f916c559f9",
+      "comment": "",
+      "command": "click",
+      "target": "id=register",
+      "targets": [
+        ["id=register", "id"],
+        ["css=#register", "css"],
+        ["css=#register", "css:finder"],
+        ["xpath=//div[@id='register']", "xpath:attributes"],
+        ["xpath=//div[@id='layer']/div[3]", "xpath:idRelative"],
+        ["xpath=//body/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ada7e10-5030-4d58-b635-b78ca634658a",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8185808-a2db-445e-914a-03e83553fba9",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": "123456h"
+    }, {
+      "id": "88866d29-4123-449b-af9a-af78d8fd05ce",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-form",
+      "targets": [
+        ["id=register-form", "id"],
+        ["css=#register-form", "css"],
+        ["css=#register-form", "css:finder"],
+        ["xpath=//div[@id='register-form']", "xpath:attributes"],
+        ["xpath=//div[@id='register']/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0dd3c2f-6646-4fce-8e0b-9ae6607e81b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-form > div.op-bt > input.bt-submit",
+      "targets": [
+        ["css=#register-form > div.op-bt > input.bt-submit", "css"],
+        ["css=.op-bt:nth-child(7) > .bt-submit", "css:finder"],
+        ["xpath=//input[@value='注册']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "036f496c-4d3b-4b4e-9546-f84ddc777cc2",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "注册成功！",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cf695ca5-e91e-4bec-bfb3-4fdeba023eb2",
+    "name": "2-7-B",
+    "commands": [{
+      "id": "99da8ff8-f6e0-4a45-b9d1-34a7ff38f49c",
+      "comment": "",
+      "command": "open",
+      "target": "/timeline-frontend/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58328d1e-9d02-4e82-ab48-e4420c93f409",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "744x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a038c6a-e1c3-48bb-8321-45af8dc5c7bf",
+      "comment": "",
+      "command": "click",
+      "target": "id=log-status",
+      "targets": [
+        ["id=log-status", "id"],
+        ["css=#log-status", "css"],
+        ["css=#log-status", "css:finder"],
+        ["xpath=//button[@id='log-status']", "xpath:attributes"],
+        ["xpath=//div[@id='bt-log']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bc98791-5e50-499c-aa43-5c2284b11a00",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=去注册",
+      "targets": [
+        ["linkText=去注册", "linkText"],
+        ["css=#go-to-register > a", "css"],
+        ["css=#go-to-register > a", "css:finder"],
+        ["xpath=//a[contains(text(),'去注册')]", "xpath:link"],
+        ["xpath=//a[@onclick='ShowRegister();']", "xpath:attributes"],
+        ["xpath=//div[@id='go-to-register']/a", "xpath:idRelative"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42b42920-c15a-4a74-a7e6-cc7b0090ba09",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a5c4187-a476-484b-b5f8-c9cc481c9721",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "  hhh"
+    }, {
+      "id": "9ddffdb7-3dc8-4a32-b51c-a6503d45ab2d",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "855b199a-b3e3-4a50-8fa6-7dd5f2e8c821",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "123456h"
+    }, {
+      "id": "ac94d4d0-8fe3-4aae-bdf1-4e9237f0c6b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-form > div.op-bt",
+      "targets": [
+        ["css=#register-form > div.op-bt", "css"],
+        ["css=.op-bt:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='register-form']/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6801393c-ef88-4c00-b03a-d96ad381ab17",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "69e444ad-d89b-4f55-85d4-fa46ab5585fd",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": "123456h"
+    }, {
+      "id": "a509f3be-9310-4c1e-95c0-eb29a3b64395",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-form > div.op-bt > input.bt-submit",
+      "targets": [
+        ["css=#register-form > div.op-bt > input.bt-submit", "css"],
+        ["css=.op-bt:nth-child(7) > .bt-submit", "css:finder"],
+        ["xpath=//input[@value='注册']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b482c4b-d092-46e5-9999-db3368a626af",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "注册成功！",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "030b2ba0-7cde-4456-ac03-e4e00bc2533d",
+    "name": "2-7-D",
+    "commands": [{
+      "id": "4074483e-74fd-437c-a893-62e4001f16aa",
+      "comment": "",
+      "command": "open",
+      "target": "/timeline-frontend/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "263d5482-66a9-420c-96b1-38524a302c17",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "744x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8260b2b4-4b7e-4b24-a563-6073d7d8f022",
+      "comment": "",
+      "command": "click",
+      "target": "id=log-status",
+      "targets": [
+        ["id=log-status", "id"],
+        ["css=#log-status", "css"],
+        ["css=#log-status", "css:finder"],
+        ["xpath=//button[@id='log-status']", "xpath:attributes"],
+        ["xpath=//div[@id='bt-log']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "700eabe4-cdff-4221-9bd2-d9485bb87c4a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=去注册",
+      "targets": [
+        ["linkText=去注册", "linkText"],
+        ["css=#go-to-register > a", "css"],
+        ["css=#go-to-register > a", "css:finder"],
+        ["xpath=//a[contains(text(),'去注册')]", "xpath:link"],
+        ["xpath=//a[@onclick='ShowRegister();']", "xpath:attributes"],
+        ["xpath=//div[@id='go-to-register']/a", "xpath:idRelative"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17edb69d-bb25-41c4-887a-a5cbfab51a53",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3377d6d-3bf3-4a6f-ad06-13a901ca756c",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-username",
+      "targets": [
+        ["id=register-username", "id"],
+        ["css=#register-username", "css"],
+        ["css=#register-username", "css:finder"],
+        ["xpath=//input[@id='register-username']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "zx zx"
+    }, {
+      "id": "d8e2ec21-ff60-4c97-85c3-bd401badb1b1",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27b920db-6d49-4442-8eee-234ed7aa8552",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-pwd",
+      "targets": [
+        ["id=register-pwd", "id"],
+        ["css=#register-pwd", "css"],
+        ["css=#register-pwd", "css:finder"],
+        ["xpath=//input[@id='register-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "8e444951-807b-4f70-a04e-5d7cea6b920f",
+      "comment": "",
+      "command": "click",
+      "target": "id=shade",
+      "targets": [
+        ["id=shade", "id"],
+        ["css=#shade", "css"],
+        ["css=#shade", "css:finder"],
+        ["xpath=//div[@id='shade']", "xpath:attributes"],
+        ["xpath=//div[@id='layer']/div", "xpath:idRelative"],
+        ["xpath=//body/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db802eec-172a-4742-a04d-08c8aa9ae69b",
+      "comment": "",
+      "command": "click",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b3065f4-0155-474a-9cc5-5fc2a38ebd2c",
+      "comment": "",
+      "command": "type",
+      "target": "id=register-confirm-pwd",
+      "targets": [
+        ["id=register-confirm-pwd", "id"],
+        ["css=#register-confirm-pwd", "css"],
+        ["css=#register-confirm-pwd", "css:finder"],
+        ["xpath=//input[@id='register-confirm-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='confirm']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "15a598b8-b2f4-4825-b21b-8ef89570df06",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-form > div.op-bt",
+      "targets": [
+        ["css=#register-form > div.op-bt", "css"],
+        ["css=.op-bt:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='register-form']/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70feb25b-87bf-46c3-a4b7-2de449c35ca0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-form > div.op-bt > input.bt-submit",
+      "targets": [
+        ["css=#register-form > div.op-bt > input.bt-submit", "css"],
+        ["css=.op-bt:nth-child(7) > .bt-submit", "css:finder"],
+        ["xpath=//input[@value='注册']", "xpath:attributes"],
+        ["xpath=//div[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2ed1884-6280-4307-a86b-5758a4cbe7a5",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "注册成功！",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "7112a53a-fb48-49ce-b516-1931569be5a7",

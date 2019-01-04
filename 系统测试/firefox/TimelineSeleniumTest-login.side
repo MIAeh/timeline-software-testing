@@ -1,7 +1,7 @@
 {
   "id": "f7da9da2-5c0f-4f1a-92ba-ceccd8f0a628",
   "version": "1.1",
-  "name": "TimelineSeleniumTest",
+  "name": "TimelineSeleniumTest-login",
   "url": "http://www.ecnu-joyin.top",
   "tests": [{
     "id": "fc14b7fb-fd26-4325-bc1f-5643e692521b",
@@ -2186,6 +2186,127 @@
       "comment": "",
       "command": "assertAlert",
       "target": "用户不存在！",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c62859dd-112d-4da6-b498-3df8383c1408",
+    "name": "1-1-A",
+    "commands": [{
+      "id": "da82c41c-fbda-42ac-a475-81cddc85bfae",
+      "comment": "",
+      "command": "open",
+      "target": "/timeline-frontend/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a111d774-582a-48cb-9924-7c1119a55950",
+      "comment": "",
+      "command": "click",
+      "target": "id=log-status",
+      "targets": [
+        ["id=log-status", "id"],
+        ["css=#log-status", "css"],
+        ["css=#log-status", "css:finder"],
+        ["xpath=//button[@id='log-status']", "xpath:attributes"],
+        ["xpath=//div[@id='bt-log']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f66a6850-e6e6-4375-8c1a-08f4d452280d",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-username",
+      "targets": [
+        ["id=login-username", "id"],
+        ["css=#login-username", "css"],
+        ["css=#login-username", "css:finder"],
+        ["xpath=//input[@id='login-username']", "xpath:attributes"],
+        ["xpath=//div[@id='login-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bcaf51f-af80-4f28-907b-aec5643b758e",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-username",
+      "targets": [
+        ["id=login-username", "id"],
+        ["css=#login-username", "css"],
+        ["css=#login-username", "css:finder"],
+        ["xpath=//input[@id='login-username']", "xpath:attributes"],
+        ["xpath=//div[@id='login-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div/div[2]/input", "xpath:position"]
+      ],
+      "value": "htx"
+    }, {
+      "id": "05a762a7-87a8-4661-b9f9-f86b13107ce1",
+      "comment": "",
+      "command": "click",
+      "target": "css=div.op-bt",
+      "targets": [
+        ["css=div.op-bt", "css"],
+        ["css=.op-bt:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='login-form']/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e882e865-43f1-4635-bf7a-e37bcb51d062",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-pwd",
+      "targets": [
+        ["id=login-pwd", "id"],
+        ["css=#login-pwd", "css"],
+        ["css=#login-pwd", "css:finder"],
+        ["xpath=//input[@id='login-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='login-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e688ad6-d22b-4989-bd2c-29cd28689f9f",
+      "comment": "",
+      "command": "type",
+      "target": "id=login-pwd",
+      "targets": [
+        ["id=login-pwd", "id"],
+        ["css=#login-pwd", "css"],
+        ["css=#login-pwd", "css:finder"],
+        ["xpath=//input[@id='login-pwd']", "xpath:attributes"],
+        ["xpath=//div[@id='login-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "123456h"
+    }, {
+      "id": "80f5379e-4299-40bd-af42-00e8196a8834",
+      "comment": "",
+      "command": "click",
+      "target": "id=bt-login",
+      "targets": [
+        ["id=bt-login", "id"],
+        ["css=#bt-login", "css"],
+        ["css=#bt-login", "css:finder"],
+        ["xpath=//input[@id='bt-login']", "xpath:attributes"],
+        ["xpath=//div[@id='login-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbbd42c3-ef48-48d8-ad09-7efc5b1b0c60",
+      "comment": "",
+      "command": "//assertAlert",
+      "target": "登陆成功",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7b95b03-5f33-4dc3-9424-a790909d2962",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "744x700",
       "targets": [],
       "value": ""
     }]
