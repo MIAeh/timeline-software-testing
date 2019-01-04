@@ -152,6 +152,7 @@ function Login() {
                     setCookie(user);
                     // console.log(getCookie());
                     document.getElementById('log-status').innerText = getCookie();
+                    alert("登陆成功");
                     HideAll();
                     console.log("----login success----");
                 } else {
