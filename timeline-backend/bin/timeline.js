@@ -100,7 +100,7 @@ app.post('/publish', function(req, res) {
         var des_file = "/opt/lampp/htdocs/timeline/" + pictureName;
         pictureName = "http://47.100.239.92/timeline/" + pictureName;
         fs.readFile( picture.path, function (err, data) {
-            fs.writeFile(des_file, data, function (err) {
+            fs.writeFileSync(des_file, data, function (err) {
                 if( err ){
                     var response = {
                         code : '001',
@@ -111,8 +111,6 @@ app.post('/publish', function(req, res) {
             });
         });
     }
-
-
 
 
     var publish = "insert into message (username, content, picture, time) value (\"" + username + "\",\"" + content +  "\",\"" + pictureName + "\",\"" + new Date().getTime() + "\")";
@@ -164,7 +162,5 @@ app.get('/messages', function(req, res) {
     });
     $sql.end();
 });
-
-
-
+module.exports = app;
 app.listen(3000);
