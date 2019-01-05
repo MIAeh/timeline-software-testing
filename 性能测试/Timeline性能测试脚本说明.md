@@ -1,20 +1,20 @@
-#### Web应用测试脚本
+# Web应用测试脚本
 
 本项目的核心交易为浏览动态和发布动态，其中任何可以访问本网站的用户均可以进行浏览动态的操作，而用户只有登录之后才可以进行发布动态。因此，将浏览页面功能录制为一个单独的脚本，将登录-发布动态-退出登录功能录制为另一个脚本。
 
-##### timeline-web-register
+### timeline-web-register
 
 模拟用户注册
 
-##### timeline-web-viewpages
+### timeline-web-viewpages
 
 模拟用户打开页面并浏览页面
 
-##### timeline-web-create
+### timeline-web-create
 
 模拟用户进行   登录-发布动态-退出登录   操作
 
 
 
-#### 桌面应用测试脚本
+### 桌面应用测试脚本
 
