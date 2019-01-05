@@ -1,0 +1,61 @@
+{
+  "id": "ab25d887-b79c-4292-9ff0-96546956c807",
+  "version": "1.1",
+  "name": "TimelineReleaseTest",
+  "url": "http://www.ecnu-joyin.top",
+  "tests": [{
+    "id": "8fa78a02-a86e-431b-8038-b365ed476963",
+    "name": "getNew",
+    "commands": [{
+      "id": "f74f7974-5f78-421a-aa7f-d20479913fd7",
+      "comment": "",
+      "command": "open",
+      "target": "/timeline-frontend/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b51ac90c-3286-4ccb-a488-da5bf27bdd64",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "703x715",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a3a4c57-fde2-4629-baf8-85a41645e72d",
+      "comment": "",
+      "command": "click",
+      "target": "css=img[alt=\"bt-refresh\"]",
+      "targets": [
+        ["css=img[alt=\"bt-refresh\"]", "css"],
+        ["css=#bt-refresh > img", "css:finder"],
+        ["xpath=//img[@alt='bt-refresh']", "xpath:img"],
+        ["xpath=//div[@id='bt-refresh']/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c5003ed-8b31-4064-a78b-736121046736",
+      "comment": "",
+      "command": "click",
+      "target": "css=img[alt=\"bt-refresh\"]",
+      "targets": [
+        ["css=img[alt=\"bt-refresh\"]", "css"],
+        ["css=#bt-refresh > img", "css:finder"],
+        ["xpath=//img[@alt='bt-refresh']", "xpath:img"],
+        ["xpath=//div[@id='bt-refresh']/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4f4a6198-40c5-4cec-ab10-57f8b0f510e6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8fa78a02-a86e-431b-8038-b365ed476963"]
+  }],
+  "urls": ["http://www.ecnu-joyin.top/"],
+  "plugins": []
+}
