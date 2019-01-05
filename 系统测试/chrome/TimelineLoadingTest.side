@@ -1,0 +1,91 @@
+{
+  "id": "5a6c2925-ab3b-423d-bf80-50209f76d8be",
+  "version": "1.1",
+  "name": "TimelineLoadingTest",
+  "url": "http://www.ecnu-joyin.top",
+  "tests": [{
+    "id": "ba058ac1-6ee3-4b3c-aac2-726ada867e13",
+    "name": "getMore-fold",
+    "commands": [{
+      "id": "e6165e7f-5b25-4c1b-8f56-2eb0284d7844",
+      "comment": "",
+      "command": "open",
+      "target": "/timeline-frontend/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c426126-9bb2-43ff-bc5a-707dd72e98f2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "703x715",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c6bc175-5fdd-4656-84da-f56c2e775f13",
+      "comment": "",
+      "command": "click",
+      "target": "id=bt-load",
+      "targets": [
+        ["id=bt-load", "id"],
+        ["css=#bt-load", "css"],
+        ["css=#bt-load", "css:finder"],
+        ["xpath=//button[@id='bt-load']", "xpath:attributes"],
+        ["xpath=//div[@id='timeline-part']/div/button", "xpath:idRelative"],
+        ["xpath=//main/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36f92136-f40a-44ef-b972-288ed9517f4c",
+      "comment": "",
+      "command": "click",
+      "target": "id=bt-load",
+      "targets": [
+        ["id=bt-load", "id"],
+        ["css=#bt-load", "css"],
+        ["css=#bt-load", "css:finder"],
+        ["xpath=//button[@id='bt-load']", "xpath:attributes"],
+        ["xpath=//div[@id='timeline-part']/div/button", "xpath:idRelative"],
+        ["xpath=//main/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a3f23bf-bc6e-47cf-ba71-1a7146f2b912",
+      "comment": "",
+      "command": "click",
+      "target": "id=bt-load",
+      "targets": [
+        ["id=bt-load", "id"],
+        ["css=#bt-load", "css"],
+        ["css=#bt-load", "css:finder"],
+        ["xpath=//button[@id='bt-load']", "xpath:attributes"],
+        ["xpath=//div[@id='timeline-part']/div/button", "xpath:idRelative"],
+        ["xpath=//main/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad79d20f-d340-4501-bedf-48c1d46f4eab",
+      "comment": "",
+      "command": "click",
+      "target": "id=bt-load",
+      "targets": [
+        ["id=bt-load", "id"],
+        ["css=#bt-load", "css"],
+        ["css=#bt-load", "css:finder"],
+        ["xpath=//button[@id='bt-load']", "xpath:attributes"],
+        ["xpath=//div[@id='timeline-part']/div/button", "xpath:idRelative"],
+        ["xpath=//main/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d2b6663b-2e37-41a4-ba4c-05fd5ba64ac8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ba058ac1-6ee3-4b3c-aac2-726ada867e13"]
+  }],
+  "urls": ["http://www.ecnu-joyin.top/"],
+  "plugins": []
+}
