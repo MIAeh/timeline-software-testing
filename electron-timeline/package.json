@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "packager":"electron-packager ./ Timeline --platform=win32 --arch=x64 --app-version=1.0.0 --ignore=node_modules"
+    "packager": "electron-packager ./ Timeline --platform=mas --arch=x64 --app-version=1.0.0 --ignore=node_modules --overwrite"
   },
   "author": "",
   "license": "ISC",
