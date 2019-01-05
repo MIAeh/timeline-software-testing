@@ -1,7 +1,12 @@
 # timeline-software-testing
 
+## 目录
+- [简介](#intro)
+- [时间安排](#schedule)
+- [项目角色](#role)
+- [文档及入口](#docs)
 
-## 简介
+## <span id="intro">简介</span>
 Web端和桌面应用端的简单Timeline应用，同时进行系统测试、性能和测试代码自测试。
 - 项目成果：
    - Web版：外部可访问网址 [http://www.ecnu-joyin.top/timeline-frontend/](http://www.ecnu-joyin.top/timeline-frontend/)
@@ -11,12 +16,11 @@ Web端和桌面应用端的简单Timeline应用，同时进行系统测试、性
    - Web和桌面端后端共享，使用Node.js的Express框架搭建，使用node-mysql与数据库联通
    - 前后端交互使用API进行JSON数据交换
    - 后端将数据库部署在云端服务器，将web代码部署在外部可访问域名上
-- 环境部署：nodeJS，npm，express，express-generator，electron，electron packager，IDE（intelliJ IDEA）
-  代码中'node_modules'文件夹为框架配置文件。   
-  具体部署步骤详见：[系统部署说明.md](./系统部署说明.md)
+- 环境部署：nodeJS，npm,express,express-generator,electron,IDE。  *代码中'node_modules'文件夹为框架配置文件。*   
+	  具体部署步骤详见：[系统部署说明.md](./系统部署说明.md)
 
 
-## 时间安排
+## <span id="schedule">时间安排</span>
 - 主要时间节点：
    - 项目分工截止时间：2018年11月26日24：00
    - 项目资产提交时间截止时间：2019年1月7日24：00
@@ -30,7 +34,7 @@ Web端和桌面应用端的简单Timeline应用，同时进行系统测试、性
    - 剩余：进行更新、完善、文档撰写
 
 
-## 项目角色
+## <span id="role">项目角色</span>
 <table width="1000">
 		<tr bgcolor="#EDEDED">
 			<th>职责</th>
@@ -40,16 +44,16 @@ Web端和桌面应用端的简单Timeline应用，同时进行系统测试、性
 		<tr>
 			<td>产品经理</td>
 			<td>徐雯蕾</td>
-			<td>时间规划、项目架构、任务分配、审查代码&报告</td>
+			<td>时间规划、项目架构、任务分配、审查代码&报告、PPT、系统部署说明撰写、文件整合</td>
 		</tr>
 		<tr>
 			<td rowspan="2">开发</td>
 			<td>徐雯蕾</td>
-			<td>Web与桌面端前端完整代码，前后端联通</td>
+			<td>Web与桌面端前端完整代码，前后端联通，打包electron可执行文件</td>
 		</tr>
 		<tr>
 			<td>杨政达</td>
-			<td>数据库部署，代码测试设计与执行，静态分析报告，覆盖度报告</td>
+			<td>数据库部署，代码测试设计与执行，静态分析报告，覆盖度报告，部署Web端代码至服务器</td>
 		</tr>
 		<tr>
 			<td rowspan="2">测试</td>
@@ -63,19 +67,20 @@ Web端和桌面应用端的简单Timeline应用，同时进行系统测试、性
 	</table>
   
 
-## 文档及入口
+## <span id="docs">文档及入口</span>
 ### 开发
 - 代码
    - [网页版](./timeline-frontend)
    - [桌面版](./electron-timeline)
    - [后端](./timeline-backend)
-
-
-### 测试
 - 代码测试
    - 测试代码
    - 覆盖度报告
    - 静态测试报告
+
+
+### 测试
+
 - 系统测试
    - 系统测试计划
    - 系统测试报告
@@ -88,5 +93,6 @@ Web端和桌面应用端的简单Timeline应用，同时进行系统测试、性
 
 ### 其他
 - [系统部署说明](./系统部署说明.md)
-- [分工 & 更新日志](./更新日志.md)
+- [人员分工 & 更新日志](./更新日志.md)
 - 展示PPT
+- 系统Demo
