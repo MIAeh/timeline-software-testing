@@ -123,6 +123,7 @@ $("#bt-cancel-post").click(function () {
  */
 $("#bt-refresh").click(function () {
     refresh();
+    $('#bt-load').text("更多...");
 });
 
 
