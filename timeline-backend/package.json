@@ -1,0 +1,23 @@
+{
+  "name": "timeline-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-formidable": "^1.2.0",
+    "http-errors": "~1.6.2",
+    "mocha": "^5.2.0",
+    "morgan": "~1.9.0",
+    "mysql": "^2.16.0",
+    "pug": "2.0.0-beta11",
+    "supertest": "^3.3.0"
+  }
+}
