@@ -5,7 +5,11 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "packager":"electron-packager ./ Timeline --platform=all --arch=x64 --app-version=1.0.0"
+<<<<<<< HEAD
+    "packager": "electron-packager ./ Timeline --platform=win32 --arch=x64 --app-version=1.0.0 --ignore=node_modules --overwrite"
+=======
+    "packager": "electron-packager ./ Timeline --platform=mas --arch=x64 --app-version=1.0.0 --ignore=node_modules --overwrite"
+>>>>>>> 348b96db4224d753d97515ad4c1c5d9239f6c295
   },
   "author": "",
   "license": "ISC",

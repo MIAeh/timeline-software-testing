@@ -163,4 +163,3 @@ app.get('/messages', function(req, res) {
     $sql.end();
 });
 module.exports = app;
-app.listen(3000);

@@ -1,5 +1,8 @@
 .idea/
 node_modules/
+electron-timeline/node_modules/
+timeline-backend/node_modules/
+electron-timeline/.idea
 
 # Logs
 logs
