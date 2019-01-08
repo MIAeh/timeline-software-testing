@@ -1,0 +1,25 @@
+{
+  "name": "timeline-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "jquery": "^3.3.1",
+    "jsdom": "^13.1.0",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.1.1",
+    "ms": "^2.1.1",
+    "zombie": "^6.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

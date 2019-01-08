@@ -89,8 +89,10 @@ function onBlur_pwd() {
         var pwd = document.getElementById('register-pwd').value;
         if(!pwd) {
             document.getElementById('register-pwd-reminder').innerHTML = "请输入密码";
+            return false;
         } else {
             document.getElementById('register-pwd-reminder').innerHTML = "";
+            return true;
         }
     }
 }
