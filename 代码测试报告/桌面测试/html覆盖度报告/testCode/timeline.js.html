@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for testCode\timeline.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">testCode/</a> timeline.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>74/74</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>29/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>74/74</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">6 statements, 8 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">262×</span>
+<span class="cline-any cline-yes">262×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">262×</span>
+<span class="cline-any cline-yes">262×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">262×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-yes">264×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span></td><td class="text"><pre class="prettyprint lang-js">var fs = require("fs");
+var jsdom = require("jsdom");
+var JSDOM = jsdom.JSDOM;
+&nbsp;
+var html = fs.readFileSync('./index.html');
+var dom = new JSDOM(html);
+var window = dom.window;
+var document = window.document;
+var $ = require("jquery")(window);
+&nbsp;
+&nbsp;
+function refresh() {
+    $.ajax({
+        "url": "http://www.ecnu-joyin.top:3000/messages",
+        "type": "GET",
+        "async": false,
+        "success": function (oRes) {
+            // var list = document.getElementById('timelines');
+            // list.childNodes().remove();
+            var list = $("#timelines");
+            list.children().remove();
+            var resLen = oRes.res.length;
+            for (var i = resLen - 1; i &gt;= 0; i--) {
+                var user = oRes.res[i].username.toString();
+                var con = oRes.res[i].content.toString();
+                var pic = encodeURI(oRes.res[i].picture.toString());
+                var timestamp = oRes.res[i].time;
+                var new_li = createTimelineItem(user, con, pic, timestamp);
+                var count = ($("li").length);
+                // console.log(count);
+                if(count &gt; 5) {
+                    new_li.classList.add('hide');
+                    document.getElementById('bt-load').classList.remove('hide');
+                }
+                list.append(new_li);
+            }
+        }
+    })
+}
+&nbsp;
+function showMore() {
+    var list = document.getElementById('timelines').childNodes;
+    var len = list.length;
+    if(list.item(6).classList.contains('hide')) {
+        for(var a = 6; a &lt; len; a++) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(list.item(a).classList.contains('hide')) {
+                list.item(a).classList.remove('hide');
+            }
+        }
+        $('#bt-load').text("收起");
+    } else {
+        for(var a = 6; a &lt; len; a++) {
+            list.item(a).classList.add('hide');
+        }
+        $('#bt-load').text("更多...");
+    }
+}
+&nbsp;
+&nbsp;
+function createTimelineItem(user, con, pic, time) {
+    var li = document.createElement('li');
+    var getPic = (pic !== "") ? '&lt;img src=' + pic + ' class="msg-pic"&gt;' : '';
+    li.innerHTML = '&lt;div class="timeline-listItem"&gt;&lt;div class="msg"&gt;&lt;p class="msg-title"&gt;' +
+        '&lt;span class="msg-user"&gt;' + user + '&lt;/span&gt;' +
+        '&lt;span class="msg-time"&gt;' + timeTrans(time) + '&lt;/span&gt;&lt;/p&gt;' +
+        '&lt;p class="msg-content"&gt;' + con + '&lt;/p&gt;' + getPic + '&lt;/div&gt;&lt;/div&gt;';
+    return li;
+}
+&nbsp;
+&nbsp;
+function timeTrans(timestamp) {
+    var second = 1000;
+    var min = second * 60;
+    var hour = min * 60;
+    var day = hour * 24;
+    var week = day * 7;
+    var month = day * 30;
+    var year = month * 12;
+&nbsp;
+    var now = new Date().getTime();
+    // console.log(now.toString());
+    var diff = now - timestamp;
+&nbsp;
+    var diffMin = diff / min;
+    var diffHour = diff / hour;
+    var diffDay = diff / day;
+    var diffWeek = diff / week;
+    var diffMonth = diff / month;
+    var diffYear = diff / year;
+&nbsp;
+    var result = "";
+    /* istanbul ignore next  */
+    <span class="skip-if-branch" title="if path not taken" >I</span>if(diffYear &gt;= 1) {
+<span class="cstat-skip" title="statement not covered" >        var date = new Date(timestamp);</span>
+<span class="cstat-skip" title="statement not covered" >        result = date.getFullYear() + "/" + date.getMonth() + "/" + date.getDate();</span>
+        /* istanbul ignore next  */
+    } else <span class="skip-if-branch" title="if path not taken" >I</span>if(diffMonth &gt;= 1 &amp;&amp; <span class="branch-1 cbranch-skip" title="branch not covered" >diffMonth &lt; 12)</span> {
+<span class="cstat-skip" title="statement not covered" >        result = parseInt(diffMonth) + "月前";</span>
+    } else <span class="skip-if-branch" title="if path not taken" >I</span>if(diffWeek &gt;= 1 &amp;&amp; <span class="branch-1 cbranch-skip" title="branch not covered" >diffWeek &lt;= 4)</span> {
+<span class="cstat-skip" title="statement not covered" >        result = parseInt(diffWeek) + "周前";</span>
+    } else <span class="skip-if-branch" title="if path not taken" >I</span>if(diffDay &gt;= 1 &amp;&amp; <span class="branch-1 cbranch-skip" title="branch not covered" >diffDay &lt; 7)</span> {
+<span class="cstat-skip" title="statement not covered" >        result = parseInt(diffDay) + "天前";</span>
+    } else if(diffHour &gt;= 1 &amp;&amp; diffHour &lt; 24) {
+        result = parseInt(diffHour) + "小时前";
+    } else <span class="skip-if-branch" title="else path not taken" >E</span>if(diffMin &gt;= 1 &amp;&amp; diffMin &lt; 60) {
+        result = parseInt(diffMin) + "分钟前";
+    } else {
+<span class="cstat-skip" title="statement not covered" >        result = "刚刚";</span>
+    }
+    return result;
+}
+&nbsp;
+var code = {
+    refresh: refresh,
+    showMore: showMore,
+    window: window,
+    document: document,
+    $: $
+};
+module.exports = code;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jan 10 2019 20:14:07 GMT+0800 (台北标准时间)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
