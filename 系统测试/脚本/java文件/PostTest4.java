@@ -7,6 +7,8 @@ import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class PostTest4 {
   private WebDriver driver;
@@ -16,7 +18,8 @@ public class PostTest4 {
 
   @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
-    driver = new FirefoxDriver();
+    System.setProperty("webdriver.ie.driver", "D:\\BrowserDriver\\IEDriverServer.exe");
+    driver = new InternetExplorerDriver();
     baseUrl = "https://www.katalon.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }

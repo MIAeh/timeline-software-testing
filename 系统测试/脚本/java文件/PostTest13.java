@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-public class PostTest8 {
+public class PostTest13 {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -18,7 +18,6 @@ public class PostTest8 {
 
   @BeforeClass(alwaysRun = true)
   public void setUp() throws Exception {
-
     System.setProperty("webdriver.ie.driver", "D:\\BrowserDriver\\IEDriverServer.exe");
     driver = new InternetExplorerDriver();
     baseUrl = "https://www.katalon.com/";
@@ -26,15 +25,14 @@ public class PostTest8 {
   }
 
   @Test
-  public void testPostTest8() throws Exception {
+  public void testPostTest13() throws Exception {
     driver.get("http://www.ecnu-joyin.top/timeline-frontend/");
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Timeline'])[2]/following::img[2]")).click();
     driver.findElement(By.id("bt-upload-img")).click();
     driver.findElement(By.id("bt-upload-img")).clear();
-    driver.findElement(By.id("bt-upload-img")).sendKeys("C:\\fakepath\\Testbig5.jpg");
-    driver.findElement(By.id("bt-upload-img")).click();
-    driver.findElement(By.id("bt-upload-img")).clear();
-    driver.findElement(By.id("bt-upload-img")).sendKeys("C:\\fakepath\\Testbig6.png");
+    driver.findElement(By.id("bt-upload-img")).sendKeys("C:\\fakepath\\Testbig7.jpeg");
+    driver.findElement(By.id("bt-post-new-msg")).click();
+    assertEquals(closeAlertAndGetItsText(), "图片大小不能超过4MB!");
   }
 
   @AfterClass(alwaysRun = true)
