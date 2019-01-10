@@ -29,6 +29,7 @@ app.post('/register', function(req, res){
 
     var outRes = res;
     $sql.query(register, function(err,res){
+        /* istanbul ignore if  */
         if(err){
             var response = {
                 code : "001",
@@ -60,6 +61,7 @@ app.get('/login', function(req, res){
 
     var outRes = res;
     $sql.query(login, function(err,res){
+        /* istanbul ignore if  */
         if(err){
             var response = {
                 code : "001",
@@ -99,6 +101,7 @@ app.post('/publish', function(req, res) {
 
         var outRes = res;
         $sql.query(publish, function(err,res){
+            /* istanbul ignore if  */
             if(err){
                 var response = {
                     code : "001",
@@ -119,6 +122,7 @@ app.post('/publish', function(req, res) {
         var des_file = "/opt/lampp/htdocs/timeline/" + pictureName;
         pictureName = "http://47.100.239.92/timeline/" + pictureName;
         fs.readFile( picture.path, function (err, data) {
+            /* istanbul ignore if  */
             if(err) {
                 var response = {
                     code : '001',
@@ -128,6 +132,7 @@ app.post('/publish', function(req, res) {
                 $sql.end();
             } else {
                 fs.writeFile(des_file, data, function (err) {
+                    /* istanbul ignore if  */
                     if( err ){
                         var response = {
                             code : '001',
@@ -140,6 +145,7 @@ app.post('/publish', function(req, res) {
 
                         var outRes = res;
                         $sql.query(publish, function(err,res){
+                            /* istanbul ignore if  */
                             if(err){
                                 var response = {
                                     code : "001",
@@ -178,6 +184,7 @@ app.get('/messages', function(req, res) {
 
     var outRes = res;
     $sql.query(messages, function(err,res){
+        /* istanbul ignore if  */
         if(err){
             var response = {
                 code : "001",
