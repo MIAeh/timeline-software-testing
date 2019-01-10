@@ -108,3 +108,12 @@ Web端和桌面应用端的简单Timeline应用，同时进行系统测试、性
 - [人员分工 & 更新日志](项目文件/更新日志.md)
 - [展示PPT](项目文件/汇报PPT(徐雯蕾,杨政达,孙雨晶,侯峂欣).pptx)
 - 系统Demo
+   - 网页版外部可访问网址 [http://www.ecnu-joyin.top/timeline-frontend/](http://www.ecnu-joyin.top/timeline-frontend/)
+   - 桌面版可执行文件 
+      - Windows版：[./electron-timeline/Timeline-win32-x64](./electron-timeline/Timeline-win32-x64)
+      - Mac版：[./electron-timeline/Timeline-mas-x64](./electron-timeline/Timeline-mas-x64)   
+   **由于打包了框架，桌面文件可能较大，请注意//不要//单独下载.exe或.app，否则可能会导致资源无法读取**
+      - 使用指南：
+         1. Download整个github包，进入上述系统对应的目录
+         2. 在目录下找到Timeline.exe/Timeline.app文件，点击打开
+         3. 系统授予应用程序权限，运行
