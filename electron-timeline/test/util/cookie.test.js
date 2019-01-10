@@ -1,18 +1,13 @@
-var fs = require("fs");
 var expect = require('chai').expect;
-var jsdom = require("jsdom");
-var JSDOM = jsdom.JSDOM;
 
-var html = fs.readFileSync('./index.html');
-var window = (new JSDOM(html)).window;
-var document = window.document;
+var code = require('../../testCode/util/cookie');
 
-window.mockData = {
-    "user": {
-        "username" : ""
-    }
-};
-
+var document = code.document;
+var window = code.window;
+var getCookie = code.getCookie;
+var setCookie = code.setCookie;
+var clearCookie = code.clearCookie;
+var checkCookie = code.checkCookie;
 
 describe('getCookie测试', function () {
     beforeEach(function () {
@@ -78,33 +73,3 @@ describe('checkCookie测试', function () {
     })
 
 });
-
-function getCookie() {
-    // $.getJSON('../data/user.js', function (data) {
-    //     var check = data["username"];
-    //     console.log(window.href);
-    //     console.log(check);
-    //     return check;
-    // })
-    var check = window.mockData.user["username"];
-    console.log(window.href);
-    console.log(check);
-    return check;
-}
-
-function setCookie(cUser) {
-    window.mockData.user["username"] = cUser;
-}
-
-function clearCookie() {
-    window.mockData.user["username"] = "";
-}
-
-
-function checkCookie() {
-    if(getCookie() !== "") {
-        document.getElementById('log-status').innerText = getCookie();
-    } else {
-        document.getElementById('log-status').innerText = "登录";
-    }
-}
