@@ -95,44 +95,75 @@ app.post('/publish', function(req, res) {
     var pictureName;
     if(typeof(picture)=="undefined") {
         pictureName = '';
+        var publish = "insert into message (username, content, picture, time) value (\"" + username + "\",\"" + content +  "\",\"" + pictureName + "\",\"" + new Date().getTime() + "\")";
+
+        var outRes = res;
+        $sql.query(publish, function(err,res){
+            if(err){
+                var response = {
+                    code : "001",
+                    err : err
+                };
+                outRes.json(response);
+            }else{
+                var response = {
+                    code : "000",
+                    res : res
+                };
+                outRes.json(response);
+            }
+        });
+        $sql.end();
     } else {
         pictureName = new Date().getTime().toString() + '-' + picture.name;
         var des_file = "/opt/lampp/htdocs/timeline/" + pictureName;
         pictureName = "http://47.100.239.92/timeline/" + pictureName;
-        fs.readFileSync( picture.path, function (err, data) {
-            fs.writeFileSync(des_file, data, function (err) {
-                if( err ){
-                    var response = {
-                        code : '001',
-                        err : err
-                    };
-                    res.json(response);
-                    console.log(des_file);
-                }
-            });
+        fs.readFile( picture.path, function (err, data) {
+            if(err) {
+                var response = {
+                    code : '001',
+                    err : err
+                };
+                res.json(response);
+                $sql.end();
+            } else {
+                fs.writeFile(des_file, data, function (err) {
+                    if( err ){
+                        var response = {
+                            code : '001',
+                            err : err
+                        };
+                        res.json(response);
+                        $sql.end();
+                    } else {
+                        var publish = "insert into message (username, content, picture, time) value (\"" + username + "\",\"" + content +  "\",\"" + pictureName + "\",\"" + new Date().getTime() + "\")";
+
+                        var outRes = res;
+                        $sql.query(publish, function(err,res){
+                            if(err){
+                                var response = {
+                                    code : "001",
+                                    err : err
+                                };
+                                outRes.json(response);
+                            }else{
+                                var response = {
+                                    code : "000",
+                                    res : res
+                                };
+                                outRes.json(response);
+                            }
+                        });
+                        $sql.end();
+                    }
+                });
+            }
+
         });
     }
 
 
-    var publish = "insert into message (username, content, picture, time) value (\"" + username + "\",\"" + content +  "\",\"" + pictureName + "\",\"" + new Date().getTime() + "\")";
 
-    var outRes = res;
-    $sql.query(publish, function(err,res){
-        if(err){
-            var response = {
-                code : "001",
-                err : err
-            };
-            outRes.json(response);
-        }else{
-            var response = {
-                code : "000",
-                res : res
-            };
-            outRes.json(response);
-        }
-    });
-    $sql.end();
 });
 
 //获取消息
