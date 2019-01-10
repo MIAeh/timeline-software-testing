@@ -11,6 +11,8 @@ Web端和桌面应用端的简单Timeline应用，同时进行系统测试、性
 - 项目成果：
    - Web版：外部可访问网址 [http://www.ecnu-joyin.top/timeline-frontend/](http://www.ecnu-joyin.top/timeline-frontend/)
    - 桌面版：可执行文件
+      - Windows版：[./electron-timeline/Timeline-win32-x64](./electron-timeline/Timeline-win32-x64)
+      - Mac版：[./electron-timeline/Timeline-darwin-x64](./electron-timeline/Timeline-darwin-x64)   
 - 技术框架：   
    - Web前端使用HTML5+CSS3+Javascript+JQuery构建页面，通过Electron在原有Web前端基础上进行修改和适配，转换为桌面应用
    - Web和桌面端后端共享，使用Node.js的Express框架搭建，使用node-mysql与数据库联通
@@ -111,7 +113,7 @@ Web端和桌面应用端的简单Timeline应用，同时进行系统测试、性
    - 网页版外部可访问网址 [http://www.ecnu-joyin.top/timeline-frontend/](http://www.ecnu-joyin.top/timeline-frontend/)
    - 桌面版可执行文件 
       - Windows版：[./electron-timeline/Timeline-win32-x64](./electron-timeline/Timeline-win32-x64)
-      - Mac版：[./electron-timeline/Timeline-mas-x64](./electron-timeline/Timeline-mas-x64)   
+      - Mac版：[./electron-timeline/Timeline-darwin-x64](./electron-timeline/Timeline-darwin-x64)   
    **由于打包了框架，桌面文件可能较大，请注意//不要//单独下载.exe或.app，否则可能会导致资源无法读取**
       - 使用指南：
          1. Download整个github包，进入上述系统对应的目录
