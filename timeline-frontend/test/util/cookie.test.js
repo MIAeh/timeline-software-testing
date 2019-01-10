@@ -74,7 +74,7 @@ describe('clearCookie测试', function () {
 
     it('clearCookie后cookie中应不含user', function () {
         clearCookie();
-        var user = '';
+        var user = null;
         var name = "user=";
         var ca = document.cookie.split(';');
         for(var i = 0; i < ca.length; i++) {
@@ -83,7 +83,7 @@ describe('clearCookie测试', function () {
                 user = c.substring(name.length, c.length);
             }
         }
-        expect(user).to.be.equal('');
+        expect(user).to.be.null;
     })
 });
 
@@ -132,8 +132,7 @@ function setCookie(cUser) {
 }
 
 function clearCookie() {
-    document.cookie = "user";
-    console.log(document.cookie);
+    document.cookie = "user=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
 }
 
 function checkCookie() {

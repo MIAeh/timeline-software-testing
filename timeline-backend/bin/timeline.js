@@ -99,7 +99,7 @@ app.post('/publish', function(req, res) {
         pictureName = new Date().getTime().toString() + '-' + picture.name;
         var des_file = "/opt/lampp/htdocs/timeline/" + pictureName;
         pictureName = "http://47.100.239.92/timeline/" + pictureName;
-        fs.readFile( picture.path, function (err, data) {
+        fs.readFileSync( picture.path, function (err, data) {
             fs.writeFileSync(des_file, data, function (err) {
                 if( err ){
                     var response = {
@@ -107,6 +107,7 @@ app.post('/publish', function(req, res) {
                         err : err
                     };
                     res.json(response);
+                    console.log(des_file);
                 }
             });
         });

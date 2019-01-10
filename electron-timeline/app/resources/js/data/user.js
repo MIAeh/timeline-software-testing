@@ -2,4 +2,4 @@ window.mockData = {
   "user": {
       "username" : ""
   }
-}
+};

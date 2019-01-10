@@ -1,13 +1,13 @@
 {
   "stats": {
-    "suites": 10,
+    "suites": 11,
     "tests": 28,
     "passes": 28,
     "pending": 0,
     "failures": 0,
-    "start": "2019-01-10T09:51:12.004Z",
-    "end": "2019-01-10T09:51:14.722Z",
-    "duration": 2718,
+    "start": "2019-01-10T09:04:26.891Z",
+    "end": "2019-01-10T09:04:34.629Z",
+    "duration": 7738,
     "testsRegistered": 28,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "717e9874-8417-489d-a9d8-7c1a1dac300a",
+    "uuid": "b23c773e-1f17-4855-9817-b16f78c8cf69",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,9 +28,9 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "d23d8f53-b8b6-4c0b-8f47-636bbc876a12",
+        "uuid": "b35e2de6-5ab9-45e1-b420-73ab3ea62a3d",
         "title": "onBlur_username测试",
-        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\timeline-frontend\\test\\log.test.js",
+        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\electron-timeline\\test\\log.test.js",
         "file": "\\test\\log.test.js",
         "beforeHooks": [],
         "afterHooks": [],
@@ -48,7 +48,7 @@
             "code": "document.getElementById('register').classList.add('hide');\nvar result = onBlur_username();\nexpect(result).to.be.equal(false);\nexpect(document.getElementById('login-username-reminder').innerHTML).to.be.equal(\"请输入用户名\");",
             "err": {},
             "isRoot": false,
-            "uuid": "9f8ce455-8ff6-4168-b667-3c2916a7a1b1",
+            "uuid": "703a904d-53e4-45c7-921c-f5d46a764cbe",
             "isHook": false,
             "skipped": false
           },
@@ -65,7 +65,7 @@
             "code": "document.getElementById('register').classList.add('hide');\ndocument.getElementById('login-username').value = 'yzd';\nvar result = onBlur_username();\nexpect(result).to.be.equal(true);\nexpect(document.getElementById('login-username-reminder').innerHTML).to.be.equal(\"\");",
             "err": {},
             "isRoot": false,
-            "uuid": "6e7716a8-ddc5-4564-bd9b-a2bc750619ec",
+            "uuid": "78dde279-5d4a-400b-aa74-6b79feab050f",
             "isHook": false,
             "skipped": false
           },
@@ -73,7 +73,7 @@
             "title": "元素register未隐藏且register-username未输入时应返回false且register-username-reminder应设为请输入用户名",
             "fullTitle": "onBlur_username测试 元素register未隐藏且register-username未输入时应返回false且register-username-reminder应设为请输入用户名",
             "timedOut": false,
-            "duration": 16,
+            "duration": 0,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -82,7 +82,7 @@
             "code": "document.getElementById('register').classList.remove('hide');\nvar result = onBlur_username();\nexpect(result).to.be.equal(false);\nexpect(document.getElementById('register-username-reminder').innerHTML).to.be.equal(\"请输入用户名\");",
             "err": {},
             "isRoot": false,
-            "uuid": "5a33a118-f997-4aeb-8b92-920d529429a6",
+            "uuid": "dd141898-7b8a-4b4c-b4fe-3d499ea574b3",
             "isHook": false,
             "skipped": false
           },
@@ -99,30 +99,30 @@
             "code": "document.getElementById('register').classList.remove('hide');\ndocument.getElementById('register-username').value = 'yzd';\nvar result = onBlur_username();\nexpect(result).to.be.equal(true);\nexpect(document.getElementById('register-username-reminder').innerHTML).to.be.equal(\"\");",
             "err": {},
             "isRoot": false,
-            "uuid": "e517f3ea-fcfb-4b81-b9ab-b5452fa458f9",
+            "uuid": "43e305b3-4887-4325-8dde-877f109ab581",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "9f8ce455-8ff6-4168-b667-3c2916a7a1b1",
-          "6e7716a8-ddc5-4564-bd9b-a2bc750619ec",
-          "5a33a118-f997-4aeb-8b92-920d529429a6",
-          "e517f3ea-fcfb-4b81-b9ab-b5452fa458f9"
+          "703a904d-53e4-45c7-921c-f5d46a764cbe",
+          "78dde279-5d4a-400b-aa74-6b79feab050f",
+          "dd141898-7b8a-4b4c-b4fe-3d499ea574b3",
+          "43e305b3-4887-4325-8dde-877f109ab581"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 16,
+        "duration": 0,
         "root": false,
         "rootEmpty": false,
         "_timeout": 10000
       },
       {
-        "uuid": "d6419fc2-497e-42d9-add8-8b8dc2e42cb7",
+        "uuid": "4b1df5b9-6234-4b43-9fba-dc24b11ec3f8",
         "title": "onBlur_pwd测试",
-        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\timeline-frontend\\test\\log.test.js",
+        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\electron-timeline\\test\\log.test.js",
         "file": "\\test\\log.test.js",
         "beforeHooks": [],
         "afterHooks": [],
@@ -140,7 +140,7 @@
             "code": "document.getElementById('register').classList.add('hide');\nvar result = onBlur_pwd();\nexpect(result).to.be.equal(false);\nexpect(document.getElementById('login-pwd-reminder').innerHTML).to.be.equal(\"请输入密码\");",
             "err": {},
             "isRoot": false,
-            "uuid": "590b03f3-6fd0-4a2e-a4a8-a7c658e44237",
+            "uuid": "7a5acbb0-8ccd-4344-b495-93773958170a",
             "isHook": false,
             "skipped": false
           },
@@ -157,7 +157,7 @@
             "code": "document.getElementById('register').classList.add('hide');\ndocument.getElementById('login-pwd').value = 'yzd';\nvar result = onBlur_pwd();\nexpect(result).to.be.equal(true);\nexpect(document.getElementById('login-pwd-reminder').innerHTML).to.be.equal(\"\");",
             "err": {},
             "isRoot": false,
-            "uuid": "9edc0076-72ff-4d36-a614-e3fbf3593bf0",
+            "uuid": "ac4ae3fa-76e9-430b-845f-50e93c5dd385",
             "isHook": false,
             "skipped": false
           },
@@ -174,7 +174,7 @@
             "code": "document.getElementById('register').classList.remove('hide');\nvar result = onBlur_pwd();\nexpect(result).to.be.equal(false);\nexpect(document.getElementById('register-pwd-reminder').innerHTML).to.be.equal(\"请输入密码\");",
             "err": {},
             "isRoot": false,
-            "uuid": "efed636c-4fa4-4491-a39a-5fa459246a1b",
+            "uuid": "810aa8c9-27dc-4b68-8b4b-4ddd6d33c32f",
             "isHook": false,
             "skipped": false
           },
@@ -191,17 +191,17 @@
             "code": "document.getElementById('register').classList.remove('hide');\ndocument.getElementById('register-pwd').value = 'yzd';\nvar result = onBlur_pwd();\nexpect(result).to.be.equal(true);\nexpect(document.getElementById('register-pwd-reminder').innerHTML).to.be.equal(\"\");",
             "err": {},
             "isRoot": false,
-            "uuid": "08e6a872-7479-47ea-8555-868541928e91",
+            "uuid": "1bf8e3fe-ec51-4180-8c7e-a743fb204afb",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "590b03f3-6fd0-4a2e-a4a8-a7c658e44237",
-          "9edc0076-72ff-4d36-a614-e3fbf3593bf0",
-          "efed636c-4fa4-4491-a39a-5fa459246a1b",
-          "08e6a872-7479-47ea-8555-868541928e91"
+          "7a5acbb0-8ccd-4344-b495-93773958170a",
+          "ac4ae3fa-76e9-430b-845f-50e93c5dd385",
+          "810aa8c9-27dc-4b68-8b4b-4ddd6d33c32f",
+          "1bf8e3fe-ec51-4180-8c7e-a743fb204afb"
         ],
         "failures": [],
         "pending": [],
@@ -212,9 +212,9 @@
         "_timeout": 10000
       },
       {
-        "uuid": "12cdd0e2-7560-409a-9f3a-65badaea64d4",
+        "uuid": "29b98613-9e7e-4598-b70a-ffb75a373397",
         "title": "onBlur_confirm_pwd测试",
-        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\timeline-frontend\\test\\log.test.js",
+        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\electron-timeline\\test\\log.test.js",
         "file": "\\test\\log.test.js",
         "beforeHooks": [],
         "afterHooks": [],
@@ -232,7 +232,7 @@
             "code": "var result = onBlur_confirm_pwd();\nexpect(result).to.be.equal(false);\nexpect(document.getElementById('confirm-pwd-reminder').innerHTML).to.be.equal(\"请再输入一遍密码！\");",
             "err": {},
             "isRoot": false,
-            "uuid": "25627f4a-293c-48cc-80e1-a8fd6c4a6477",
+            "uuid": "a1543927-c4e6-4acc-973a-002176f11619",
             "isHook": false,
             "skipped": false
           },
@@ -249,7 +249,7 @@
             "code": "document.getElementById('register-pwd').value = 'yzd';\ndocument.getElementById('register-confirm-pwd').value = 'yzd2';\nvar result = onBlur_confirm_pwd();\nexpect(result).to.be.equal(false);\nexpect(document.getElementById('confirm-pwd-reminder').innerHTML).to.be.equal(\"两次输入密码不一致\");",
             "err": {},
             "isRoot": false,
-            "uuid": "f06f3e0e-75ba-4fb4-837a-6d7e35a8a5ea",
+            "uuid": "e7488b3a-909a-4594-b8f5-0538ccf1f4fc",
             "isHook": false,
             "skipped": false
           },
@@ -266,16 +266,16 @@
             "code": "document.getElementById('register-pwd').value = 'yzd';\ndocument.getElementById('register-confirm-pwd').value = 'yzd';\nvar result = onBlur_confirm_pwd();\nexpect(result).to.be.equal(true);\nexpect(document.getElementById('confirm-pwd-reminder').innerHTML).to.be.equal(\"\");",
             "err": {},
             "isRoot": false,
-            "uuid": "943aa1c5-1025-49e8-b865-6bebe764de21",
+            "uuid": "8cb9ba3f-9cd7-4420-b9c9-1b0421325a94",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "25627f4a-293c-48cc-80e1-a8fd6c4a6477",
-          "f06f3e0e-75ba-4fb4-837a-6d7e35a8a5ea",
-          "943aa1c5-1025-49e8-b865-6bebe764de21"
+          "a1543927-c4e6-4acc-973a-002176f11619",
+          "e7488b3a-909a-4594-b8f5-0538ccf1f4fc",
+          "8cb9ba3f-9cd7-4420-b9c9-1b0421325a94"
         ],
         "failures": [],
         "pending": [],
@@ -286,9 +286,79 @@
         "_timeout": 10000
       },
       {
-        "uuid": "7f336f72-7603-42c3-8065-b7d89a85a31b",
+        "uuid": "c8b1b38b-c675-44ca-97b7-70262bd55d48",
+        "title": "应用启动测试",
+        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\electron-timeline\\test\\main.test.js",
+        "file": "\\test\\main.test.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "应用启动测试 \"before each\" hook",
+            "timedOut": false,
+            "duration": 3321,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "this.app = new Application({\n    path: './Timeline-win32-x64/Timeline.exe'\n});\nreturn this.app.start()",
+            "err": {},
+            "isRoot": false,
+            "uuid": "d31edf6c-8cf3-468f-b03e-f9d04f4b05d5",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook",
+            "fullTitle": "应用启动测试 \"after each\" hook",
+            "timedOut": false,
+            "duration": 1062,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "if (this.app && this.app.isRunning()) {\n    return this.app.stop()\n}",
+            "err": {},
+            "isRoot": false,
+            "uuid": "a0077bd1-481a-4bda-9b7d-10677af9e1b2",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "应打开一个窗口",
+            "fullTitle": "应用启动测试 应打开一个窗口",
+            "timedOut": false,
+            "duration": 8,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "return this.app.client.getWindowCount().then(function (count) {\n    expect(count).to.be.equal(1);\n})",
+            "err": {},
+            "isRoot": false,
+            "uuid": "2bbad867-d40f-4827-a7fb-70de9ab01cdf",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "2bbad867-d40f-4827-a7fb-70de9ab01cdf"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 8,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 10000
+      },
+      {
+        "uuid": "5a160fba-f8e7-43ce-93da-a3ded3a1d85f",
         "title": "refresh测试",
-        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\timeline-frontend\\test\\timeline.test.js",
+        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\electron-timeline\\test\\timeline.test.js",
         "file": "\\test\\timeline.test.js",
         "beforeHooks": [],
         "afterHooks": [],
@@ -297,7 +367,7 @@
             "title": "li元素数量应大于6，第6条li应未被隐藏，第7条li应被隐藏，bt-load应未被隐藏",
             "fullTitle": "refresh测试 li元素数量应大于6，第6条li应未被隐藏，第7条li应被隐藏，bt-load应未被隐藏",
             "timedOut": false,
-            "duration": 2468,
+            "duration": 3082,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -306,27 +376,27 @@
             "code": "refresh();\nvar list = $(\"#timelines\");\nvar count = ($(\"li\").length);\nexpect(count).to.be.above(6);\nexpect(list.children(\"li:eq(5)\").hasClass(\"hide\")).to.be.equal(false);\nexpect(list.children(\"li:eq(6)\").hasClass(\"hide\")).to.be.equal(true);\nexpect(document.getElementById('bt-load').classList.contains('hide')).to.be.equal(false);",
             "err": {},
             "isRoot": false,
-            "uuid": "dd938a4d-9df5-4aeb-beed-57562ca06589",
+            "uuid": "7961a061-d7fe-4b0c-91d5-a589d1c0bf59",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "dd938a4d-9df5-4aeb-beed-57562ca06589"
+          "7961a061-d7fe-4b0c-91d5-a589d1c0bf59"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 2468,
+        "duration": 3082,
         "root": false,
         "rootEmpty": false,
         "_timeout": 10000
       },
       {
-        "uuid": "15ccd286-378c-4fa8-bb8a-39f0d7ae1807",
+        "uuid": "cdea63e1-95eb-4ed8-bdb6-4491647d61f8",
         "title": "showMore测试",
-        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\timeline-frontend\\test\\timeline.test.js",
+        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\electron-timeline\\test\\timeline.test.js",
         "file": "\\test\\timeline.test.js",
         "beforeHooks": [],
         "afterHooks": [],
@@ -335,16 +405,16 @@
             "title": "第7个子元素隐藏时应将所有子元素取消隐藏且bt-load显示收起",
             "fullTitle": "showMore测试 第7个子元素隐藏时应将所有子元素取消隐藏且bt-load显示收起",
             "timedOut": false,
-            "duration": 15,
+            "duration": 47,
             "state": "passed",
-            "speed": "fast",
+            "speed": "medium",
             "pass": true,
             "fail": false,
             "pending": false,
             "code": "var list = document.getElementById('timelines').childNodes;\nvar len = list.length;\nlist.item(6).classList.add('hide');\nshowMore();\nexpect($(\"#timelines\").children(\"li\").hasClass('hide')).to.be.equal(false);\nexpect($('#bt-load').text()).to.be.equal(\"收起\");",
             "err": {},
             "isRoot": false,
-            "uuid": "e591bdc1-2995-4c0b-ba79-d755310e65cf",
+            "uuid": "a9619d42-6943-4459-97d6-a005cee994f7",
             "isHook": false,
             "skipped": false
           },
@@ -352,7 +422,7 @@
             "title": "第7个子元素未隐藏时应将第7个及之后的子元素隐藏且bt-load显示更多...",
             "fullTitle": "showMore测试 第7个子元素未隐藏时应将第7个及之后的子元素隐藏且bt-load显示更多...",
             "timedOut": false,
-            "duration": 16,
+            "duration": 31,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -361,28 +431,28 @@
             "code": "var list = document.getElementById('timelines').childNodes;\nvar len = list.length;\nlist.item(6).classList.remove('hide');\nshowMore();\nexpect($(\"#timelines\").children(\"li:eq(6)\").hasClass('hide')).to.be.equal(true);\nexpect($(\"#timelines\").children(\"li:last-child\").hasClass('hide')).to.be.equal(true)\nexpect($('#bt-load').text()).to.be.equal(\"更多...\");",
             "err": {},
             "isRoot": false,
-            "uuid": "da618eb9-0208-4c5c-9787-f872269a7923",
+            "uuid": "01ba440b-cd39-4c03-ac21-a0d76df11209",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "e591bdc1-2995-4c0b-ba79-d755310e65cf",
-          "da618eb9-0208-4c5c-9787-f872269a7923"
+          "a9619d42-6943-4459-97d6-a005cee994f7",
+          "01ba440b-cd39-4c03-ac21-a0d76df11209"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 31,
+        "duration": 78,
         "root": false,
         "rootEmpty": false,
         "_timeout": 10000
       },
       {
-        "uuid": "2abea9e2-69a6-4578-a8dc-239fa72adef7",
+        "uuid": "37033133-7dfb-429e-9ebf-858b96fadbe9",
         "title": "getCookie测试",
-        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\timeline-frontend\\test\\util\\cookie.test.js",
+        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\electron-timeline\\test\\util\\cookie.test.js",
         "file": "\\test\\util\\cookie.test.js",
         "beforeHooks": [
           {
@@ -393,10 +463,10 @@
             "pass": false,
             "fail": false,
             "pending": false,
-            "code": "//清空所有cookie\nvar cookies = document.cookie.split(\";\");\nfor (var i = 0; i < cookies.length; i++) {\n    var cookie = cookies[i];\n    var eqPos = cookie.indexOf(\"=\");\n    var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;\n    document.cookie = name + \"=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/\";\n}",
+            "code": "//清空cookie\nwindow.mockData.user[\"username\"] = \"\";",
             "err": {},
             "isRoot": false,
-            "uuid": "9d659139-2f41-4fe5-80a5-197fcbcc87e8",
+            "uuid": "6a1b58c5-2c1c-422d-86a6-ac3d80bcdb7c",
             "isHook": true,
             "skipped": false
           }
@@ -407,7 +477,7 @@
             "title": "未设置cookie时应返回空字符串",
             "fullTitle": "getCookie测试 未设置cookie时应返回空字符串",
             "timedOut": false,
-            "duration": 15,
+            "duration": 0,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -416,13 +486,13 @@
             "code": "var cookie = getCookie();\nexpect(cookie).to.be.equal('');",
             "err": {},
             "isRoot": false,
-            "uuid": "f4b224c7-956a-483b-aace-320fd2ba5254",
+            "uuid": "5a14b6be-49f9-47fd-bf2a-aaf26e9a027c",
             "isHook": false,
             "skipped": false
           },
           {
-            "title": "设置了cookie但其中没有user时应返回空字符串",
-            "fullTitle": "getCookie测试 设置了cookie但其中没有user时应返回空字符串",
+            "title": "设置了cookie时应返回设置内容",
+            "fullTitle": "getCookie测试 设置了cookie时应返回设置内容",
             "timedOut": false,
             "duration": 0,
             "state": "passed",
@@ -430,144 +500,18 @@
             "pass": true,
             "fail": false,
             "pending": false,
-            "code": "document.cookie = \"name=test\";\ndocument.cookie = \"time=now\";\nvar cookie = getCookie();\nexpect(cookie).to.be.equal('');",
+            "code": "window.mockData.user[\"username\"] = 'yzd';\nvar cookie = getCookie();\nexpect(cookie).to.be.equal('yzd');",
             "err": {},
             "isRoot": false,
-            "uuid": "3ac135f7-ca69-41f7-a4e0-7708556d3361",
-            "isHook": false,
-            "skipped": false
-          },
-          {
-            "title": "设置了多个cookie且其中有user时应返回user内容",
-            "fullTitle": "getCookie测试 设置了多个cookie且其中有user时应返回user内容",
-            "timedOut": false,
-            "duration": 0,
-            "state": "passed",
-            "speed": "fast",
-            "pass": true,
-            "fail": false,
-            "pending": false,
-            "code": "document.cookie = \"name=test\";\ndocument.cookie = \"time=now\";\ndocument.cookie = \"user=yzd\";\nvar cookie = getCookie();\nexpect(cookie).to.be.equal('yzd');",
-            "err": {},
-            "isRoot": false,
-            "uuid": "92080296-2ce8-477e-a32d-071489f63351",
+            "uuid": "eda50f6c-b49e-44db-98eb-54f3425b0b9b",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "f4b224c7-956a-483b-aace-320fd2ba5254",
-          "3ac135f7-ca69-41f7-a4e0-7708556d3361",
-          "92080296-2ce8-477e-a32d-071489f63351"
-        ],
-        "failures": [],
-        "pending": [],
-        "skipped": [],
-        "duration": 15,
-        "root": false,
-        "rootEmpty": false,
-        "_timeout": 10000
-      },
-      {
-        "uuid": "f5b35da2-7be0-4f92-9dd8-08527dc3922d",
-        "title": "setCookie测试",
-        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\timeline-frontend\\test\\util\\cookie.test.js",
-        "file": "\\test\\util\\cookie.test.js",
-        "beforeHooks": [
-          {
-            "title": "\"before all\" hook",
-            "fullTitle": "setCookie测试 \"before all\" hook",
-            "timedOut": false,
-            "duration": 0,
-            "pass": false,
-            "fail": false,
-            "pending": false,
-            "code": "//清空所有cookie\nvar cookies = document.cookie.split(\";\");\nfor (var i = 0; i < cookies.length; i++) {\n    var cookie = cookies[i];\n    var eqPos = cookie.indexOf(\"=\");\n    var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;\n    document.cookie = name + \"=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/\";\n}",
-            "err": {},
-            "isRoot": false,
-            "uuid": "406c38c3-f830-4b12-8827-d15f4bf4e0e7",
-            "isHook": true,
-            "skipped": false
-          }
-        ],
-        "afterHooks": [],
-        "tests": [
-          {
-            "title": "setCookie后cookie中user应正确设置",
-            "fullTitle": "setCookie测试 setCookie后cookie中user应正确设置",
-            "timedOut": false,
-            "duration": 16,
-            "state": "passed",
-            "speed": "fast",
-            "pass": true,
-            "fail": false,
-            "pending": false,
-            "code": "setCookie('yzd');\nvar user;\nvar name = \"user=\";\nvar ca = document.cookie.split(';');\nfor(var i = 0; i < ca.length; i++) {\n    var c = ca[i].trim();\n    if (c.indexOf(name) === 0) {\n        user =  c.substring(name.length, c.length);\n    }\n}\nexpect(user).to.be.equal('yzd');",
-            "err": {},
-            "isRoot": false,
-            "uuid": "6d5fccc2-4ef6-4a6a-925d-158f478590e7",
-            "isHook": false,
-            "skipped": false
-          }
-        ],
-        "suites": [],
-        "passes": [
-          "6d5fccc2-4ef6-4a6a-925d-158f478590e7"
-        ],
-        "failures": [],
-        "pending": [],
-        "skipped": [],
-        "duration": 16,
-        "root": false,
-        "rootEmpty": false,
-        "_timeout": 10000
-      },
-      {
-        "uuid": "373afb79-42b7-42a7-8fb3-8f19f3bbbe65",
-        "title": "clearCookie测试",
-        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\timeline-frontend\\test\\util\\cookie.test.js",
-        "file": "\\test\\util\\cookie.test.js",
-        "beforeHooks": [
-          {
-            "title": "\"before all\" hook",
-            "fullTitle": "clearCookie测试 \"before all\" hook",
-            "timedOut": false,
-            "duration": 0,
-            "pass": false,
-            "fail": false,
-            "pending": false,
-            "code": "document.cookie = \"user=yzd\";",
-            "err": {},
-            "isRoot": false,
-            "uuid": "0e767004-e68d-41f2-a535-ef27f4fce8c5",
-            "isHook": true,
-            "skipped": false
-          }
-        ],
-        "afterHooks": [],
-        "tests": [
-          {
-            "title": "clearCookie后cookie中应不含user",
-            "fullTitle": "clearCookie测试 clearCookie后cookie中应不含user",
-            "timedOut": false,
-            "duration": 0,
-            "state": "passed",
-            "speed": "fast",
-            "pass": true,
-            "fail": false,
-            "pending": false,
-            "code": "clearCookie();\nvar user = null;\nvar name = \"user=\";\nvar ca = document.cookie.split(';');\nfor(var i = 0; i < ca.length; i++) {\n    var c = ca[i].trim();\n    if (c.indexOf(name) === 0) {\n        user = c.substring(name.length, c.length);\n    }\n}\nexpect(user).to.be.null;",
-            "err": {},
-            "isRoot": false,
-            "uuid": "57644448-079a-4f1e-9ab2-cb7ee9a8bb61",
-            "isHook": false,
-            "skipped": false
-          }
-        ],
-        "suites": [],
-        "passes": [
-          "57644448-079a-4f1e-9ab2-cb7ee9a8bb61"
+          "5a14b6be-49f9-47fd-bf2a-aaf26e9a027c",
+          "eda50f6c-b49e-44db-98eb-54f3425b0b9b"
         ],
         "failures": [],
         "pending": [],
@@ -578,9 +522,117 @@
         "_timeout": 10000
       },
       {
-        "uuid": "7da38a30-7f87-4016-9e21-7a831734f40c",
+        "uuid": "3e6c7f76-1dbe-408b-9d42-23c2026feb56",
+        "title": "setCookie测试",
+        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\electron-timeline\\test\\util\\cookie.test.js",
+        "file": "\\test\\util\\cookie.test.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "setCookie测试 \"before all\" hook",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "//清空cookie\nwindow.mockData.user[\"username\"] = \"\";",
+            "err": {},
+            "isRoot": false,
+            "uuid": "5b53f7dc-4dae-47cd-9d4d-47e64bfb6d83",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "setCookie后cookie中username应正确设置",
+            "fullTitle": "setCookie测试 setCookie后cookie中username应正确设置",
+            "timedOut": false,
+            "duration": 0,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "setCookie('yzd');\nvar user = window.mockData.user[\"username\"];\nexpect(user).to.be.equal('yzd');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "12caa189-75c8-46b4-9394-a03bf109c75c",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "12caa189-75c8-46b4-9394-a03bf109c75c"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 10000
+      },
+      {
+        "uuid": "242501c7-6a36-4168-bb6b-6631f93b3a2a",
+        "title": "clearCookie测试",
+        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\electron-timeline\\test\\util\\cookie.test.js",
+        "file": "\\test\\util\\cookie.test.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "clearCookie测试 \"before all\" hook",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "window.mockData.user[\"username\"] = 'yzd';",
+            "err": {},
+            "isRoot": false,
+            "uuid": "b5cc0c95-4e35-4cc7-9e8c-5d6191b469b8",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "clearCookie后cookie中username应为空字符串",
+            "fullTitle": "clearCookie测试 clearCookie后cookie中username应为空字符串",
+            "timedOut": false,
+            "duration": 0,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "clearCookie();\nvar user = null;\nuser = window.mockData.user[\"username\"];\nexpect(user).to.be.equal('');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "025c630a-4a6a-453e-b19f-4ccdb6bb5447",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "025c630a-4a6a-453e-b19f-4ccdb6bb5447"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 10000
+      },
+      {
+        "uuid": "add03caa-62d1-41e6-8456-46c21d5cb97f",
         "title": "checkCookie测试",
-        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\timeline-frontend\\test\\util\\cookie.test.js",
+        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\electron-timeline\\test\\util\\cookie.test.js",
         "file": "\\test\\util\\cookie.test.js",
         "beforeHooks": [
           {
@@ -591,10 +643,10 @@
             "pass": false,
             "fail": false,
             "pending": false,
-            "code": "//清空所有cookie\nvar cookies = document.cookie.split(\";\");\nfor (var i = 0; i < cookies.length; i++) {\n    var cookie = cookies[i];\n    var eqPos = cookie.indexOf(\"=\");\n    var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;\n    document.cookie = name + \"=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/\";\n}",
+            "code": "//清空cookie\nwindow.mockData.user[\"username\"] = \"\";",
             "err": {},
             "isRoot": false,
-            "uuid": "c85122a6-a50a-4bb9-86c1-b873c2c701d5",
+            "uuid": "20782e16-cc54-4eb7-8383-f87e87a20c86",
             "isHook": true,
             "skipped": false
           }
@@ -605,16 +657,16 @@
             "title": "cookie中无user时log-status内应设置为登录",
             "fullTitle": "checkCookie测试 cookie中无user时log-status内应设置为登录",
             "timedOut": false,
-            "duration": 0,
+            "duration": 16,
             "state": "passed",
             "speed": "fast",
             "pass": true,
             "fail": false,
             "pending": false,
-            "code": "checkCookie();\nexpect(document.getElementById('log-status').innerText).to.be.equal('登录');",
+            "code": "window.mockData.user[\"username\"] = '';\ncheckCookie();\nexpect(document.getElementById('log-status').innerText).to.be.equal('登录');",
             "err": {},
             "isRoot": false,
-            "uuid": "91edbe9f-3f9d-4e16-9072-5488a91fe0d3",
+            "uuid": "b6b44362-d972-4d6d-86f5-525e8ac2292f",
             "isHook": false,
             "skipped": false
           },
@@ -628,31 +680,31 @@
             "pass": true,
             "fail": false,
             "pending": false,
-            "code": "document.cookie = \"user=yzd\";\ncheckCookie();\nexpect(document.getElementById('log-status').innerText).to.be.equal('yzd');",
+            "code": "window.mockData.user[\"username\"] = 'yzd';\ncheckCookie();\nexpect(document.getElementById('log-status').innerText).to.be.equal('yzd');",
             "err": {},
             "isRoot": false,
-            "uuid": "bf45dd20-560f-4fc3-8c5d-4b0a5d8f837e",
+            "uuid": "66e56c02-2c57-41f1-b26d-3246e1df2aa9",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "91edbe9f-3f9d-4e16-9072-5488a91fe0d3",
-          "bf45dd20-560f-4fc3-8c5d-4b0a5d8f837e"
+          "b6b44362-d972-4d6d-86f5-525e8ac2292f",
+          "66e56c02-2c57-41f1-b26d-3246e1df2aa9"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 0,
+        "duration": 16,
         "root": false,
         "rootEmpty": false,
         "_timeout": 10000
       },
       {
-        "uuid": "1eade237-07d1-4285-a022-e2654e2b18a8",
+        "uuid": "e5e03037-c636-41f1-a4b4-e3b9feb2f72e",
         "title": "timeTrans测试",
-        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\timeline-frontend\\test\\util\\timeline-item.test.js",
+        "fullFile": "D:\\软件测试\\期末项目\\timeline-software-testing\\electron-timeline\\test\\util\\timeline-item.test.js",
         "file": "\\test\\util\\timeline-item.test.js",
         "beforeHooks": [],
         "afterHooks": [],
@@ -670,7 +722,7 @@
             "code": "var time = new Date().getTime();\nvar result = timeTrans(time);\nexpect(result).to.be.equal('刚刚');",
             "err": {},
             "isRoot": false,
-            "uuid": "e481729a-2266-4653-bb35-76ecdd0cd38e",
+            "uuid": "296aed0d-86aa-43d3-9dd4-20f923ea5d59",
             "isHook": false,
             "skipped": false
           },
@@ -687,7 +739,7 @@
             "code": "var time = new Date().getTime() - 30*60*1000;\nvar result = timeTrans(time);\nexpect(result).to.be.equal('30分钟前');",
             "err": {},
             "isRoot": false,
-            "uuid": "9fa49b9a-f263-423b-a709-03a86c15c7d7",
+            "uuid": "4afd0a29-3012-40ff-983d-62cd806f122e",
             "isHook": false,
             "skipped": false
           },
@@ -704,7 +756,7 @@
             "code": "var time = new Date().getTime() - 2*60*60*1000;\nvar result = timeTrans(time);\nexpect(result).to.be.equal('2小时前');",
             "err": {},
             "isRoot": false,
-            "uuid": "8b97f1ed-4dcc-45ba-8f2e-f1b44ab19568",
+            "uuid": "f1b96d61-6e59-4fa9-88f6-ff7d7f268ed5",
             "isHook": false,
             "skipped": false
           },
@@ -721,7 +773,7 @@
             "code": "var time = new Date().getTime() - 2*24*60*60*1000;\nvar result = timeTrans(time);\nexpect(result).to.be.equal('2天前');",
             "err": {},
             "isRoot": false,
-            "uuid": "cd4794a7-1feb-490d-83b3-96edd47e2723",
+            "uuid": "d48b89cc-3d7a-4b9b-a2d7-d33852a54bb1",
             "isHook": false,
             "skipped": false
           },
@@ -738,7 +790,7 @@
             "code": "var time = new Date().getTime() - 2*7*24*60*60*1000;\nvar result = timeTrans(time);\nexpect(result).to.be.equal('2周前');",
             "err": {},
             "isRoot": false,
-            "uuid": "ed49ae66-e25e-4ffa-bc38-0238f9a9d74f",
+            "uuid": "18d99559-6006-40e9-a8d1-5a5028dcc0b8",
             "isHook": false,
             "skipped": false
           },
@@ -755,7 +807,7 @@
             "code": "var time = new Date().getTime() - 2*30*24*60*60*1000;\nvar result = timeTrans(time);\nexpect(result).to.be.equal('2月前');",
             "err": {},
             "isRoot": false,
-            "uuid": "b8677a27-a0f5-4342-8b56-9a1bcf092f03",
+            "uuid": "3934e2fe-927f-4a49-917e-78ee9fddf4fa",
             "isHook": false,
             "skipped": false
           },
@@ -772,20 +824,20 @@
             "code": "var time = new Date().getTime() - 13*30*7*24*60*60*1000;\nvar result = timeTrans(time);\nvar date = new Date(time);\nvar expectResult = date.getFullYear() + \"/\" + date.getMonth() + \"/\" + date.getDate();\nexpect(result).to.be.equal(expectResult);",
             "err": {},
             "isRoot": false,
-            "uuid": "09424bc2-6c6a-412f-a1ff-31bc3ec16727",
+            "uuid": "e70e2bf0-0da3-4cbb-90cd-9d9f3dcdd01f",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "e481729a-2266-4653-bb35-76ecdd0cd38e",
-          "9fa49b9a-f263-423b-a709-03a86c15c7d7",
-          "8b97f1ed-4dcc-45ba-8f2e-f1b44ab19568",
-          "cd4794a7-1feb-490d-83b3-96edd47e2723",
-          "ed49ae66-e25e-4ffa-bc38-0238f9a9d74f",
-          "b8677a27-a0f5-4342-8b56-9a1bcf092f03",
-          "09424bc2-6c6a-412f-a1ff-31bc3ec16727"
+          "296aed0d-86aa-43d3-9dd4-20f923ea5d59",
+          "4afd0a29-3012-40ff-983d-62cd806f122e",
+          "f1b96d61-6e59-4fa9-88f6-ff7d7f268ed5",
+          "d48b89cc-3d7a-4b9b-a2d7-d33852a54bb1",
+          "18d99559-6006-40e9-a8d1-5a5028dcc0b8",
+          "3934e2fe-927f-4a49-917e-78ee9fddf4fa",
+          "e70e2bf0-0da3-4cbb-90cd-9d9f3dcdd01f"
         ],
         "failures": [],
         "pending": [],
