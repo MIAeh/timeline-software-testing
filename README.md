@@ -79,8 +79,9 @@ Web端和桌面应用端的简单Timeline应用，同时进行系统测试、性
  ***由于桌面端使用了框架，基础的页面设计和UI、交互是同一份代码，因此electron端沿用了Web端的代码测试，新增了部分改动源代码的相应测试***
    - 测试代码   
       - [网页端](./timeline-frontend/test)
+      *与test文件夹同级的testCode文件夹是为了测试重构的前端部分代码*
       - [桌面端](./electron-timeline/test)
-      *testCode文件夹是为了测试重构的前端部分代码*
+      *与test文件夹同级的testCode文件夹是为了测试重构的前端部分代码*
       - [后端](./timeline-backend/test)
    - 测试报告
    ***测试报告及覆盖度报告均为html形式，请用git下载后用浏览器打开对应文件夹下的html文件***
